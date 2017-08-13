@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<div class="services-page">
   <!-- CTA -->
   <div class="cta">
     <div class="container">
@@ -272,7 +272,11 @@
     </div>   <!-- End .container -->
   </div> <!-- End .contact -->
 </div>	 <!-- End .macbook-bg -->
+</div>	 <!-- End .services -->
 
-
-
+<style>
+#subscribe-link, #services-link, .dropdown-menu {
+  display:none!important;
+}
+</style>
 {% endblock content %}
