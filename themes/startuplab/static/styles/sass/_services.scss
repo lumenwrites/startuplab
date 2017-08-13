@@ -1,0 +1,235 @@
+/* CTA */
+.cta {
+    text-align: center;
+    /* background: white url("/static/img/code-lines.png") no-repeat center; */
+    /* background: #29bbce linear-gradient(#29bbce, #1894bb);  */
+    /* background: white url("/static/img/blue-gradient-min.jpg") no-repeat center; */
+    background: white url("/static/img/blue-pattern-background-1920-min.png") no-repeat center;
+    
+    background-size: cover;
+
+    padding: 80px;
+    @media(max-width: 960px) {
+	padding: 40px 0;
+	padding-top: 80px;
+    }
+    padding-top: 120px;
+    h1, p {
+	color: white;
+    }
+    .tagline {
+	color: $orange;
+	color: white;
+    }
+
+    .small {
+	font-size: 10px;
+	color: white;
+    }
+}
+
+.services {
+    background-color: #282f30;		/* dark */
+    background-color: rgb(233, 95, 15); /* orange */
+    background-color: #1e2329;		/* dark form color */
+    padding: 40px;
+    @media(max-width: 960px) {
+	padding: 20px 0;
+    }
+    
+    table {
+	font-size: 1em;
+	margin:auto;
+	td {
+	    color: $orange;
+	    padding-left: 20px;
+	}
+    }
+    .service {
+	float:left;
+	width: 25%;
+	@media(max-width: 960px) {
+	    width: 50%;
+	}
+	padding:10px;
+	h2 {
+	    font-size: 18px;
+	}
+	h2, p {
+	    color: $orange;
+	    /* color: white; */
+	    text-align: center;
+	    
+	}
+    }
+}
+
+.projects {
+    padding: 40px;
+    @media(max-width: 960px) {
+	padding: 20px 0;
+    }
+    /* background: rgb(239, 215, 191); /\* peach *\/ */    
+
+    h2 {
+	color: $orange;
+	/* color: $black;	 */
+	text-align: center;
+    }
+
+    /* Carousel */
+    .carousel-control-prev-icon {
+	background-image: url("/static/img/arrow-left-min.png");
+	@media(max-width: 960px) {
+	    display:none;
+	}	
+    }
+    .carousel-control-next-icon {
+	background-image: url("/static/img/arrow-right-min.png");
+	@media(max-width: 960px) {
+	    display:none;
+	}		
+    }    
+    .carousel-caption {
+	background: $orange;
+	position: relative;
+	left: auto;
+	right: auto;
+
+	padding:10px;
+	color: $black;
+	p {
+	    color: white;
+	    margin:auto;
+	    text-shadow: none;
+	    @media(max-width: 960px) {
+		font-size: 12px;
+	    }
+	}
+	h3 {
+	    color: $black;
+	    color: white;
+	    text-shadow: none;
+	    @media(max-width: 960px) {
+		font-size: 18px;
+	    }
+
+	}
+    }
+    /* Arrow */
+    .carousel-caption::before {
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	background: $orange;
+	top: 4px;
+	right: calc(50% - 12px);
+	transform: translate(0, -50%) rotate(45deg);
+	z-index: -10;
+    }    
+    .carousel-control-next, .carousel-control-prev  {
+	opacity:1!important;
+    }
+    .carousel-control-next {
+	right: -80px;
+	@media(max-width: 960px) {
+	    right: 0;
+	}
+    }
+    .carousel-control-prev  {
+	left: -80px;
+	@media(max-width: 960px) {
+	    left: 0;
+	}
+    }
+
+
+    article {
+	float:left;
+	width: calc(50% - 40px);
+	margin: 20px;
+	display:none!important;
+
+	@media(max-width: 960px) {
+	    width: 100%;
+	    margin: 0px;
+	    margin-bottom: 40px;
+	}
+
+	background: white;
+
+	.screenshot {
+	    overflow:hidden;
+	    height: 140px;
+	    img {
+		width: 100%;
+	    }
+	}
+	.description {
+	    h3 {
+		color: $black;		
+	    }
+	    padding: 10px 20px;
+	    height: 140px;
+	}
+    }
+}
+
+.macbook-bg {
+    /* background: white url("/static/img/macbook.png") no-repeat center; */
+    background: white url("/static/img/dots-bg-min.jpg") no-repeat center;    
+    background-size: cover;
+
+}
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.8);
+    img {
+	margin-bottom: 20px;
+    }
+    hr {
+	width: 40px;
+	margin: 10px auto;
+    }
+    p {
+	color:white;
+    }
+}
+
+.contact {
+    padding: 40px;
+    padding-bottom: 20px;    
+    background: rgba(0,0,0,0.8);
+    background: rgb(39, 46, 51);
+
+    h2, p {
+	color:white;
+	text-align:center;
+
+    }
+    textarea {
+	min-height: calc(100vh - 300px);
+	@media(max-width: 960px) {
+	    min-height: 300px;
+	}
+    }
+    .form-control {
+	border: none;
+	background: rgb(30, 35, 41);
+	color: white;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #333a42;
+    background-color: #1e2329;	/* darker form */
+    color: #babfc2;
+    min-height:20px;    
+}
+

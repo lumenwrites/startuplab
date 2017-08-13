@@ -1,0 +1,111 @@
+body  {
+    background: #0e2439;
+    min-height:100vh;
+}
+
+article {
+    background: #1f364d;
+    color: #9cb3c9;
+    border: none;
+    box-shadow: 0 0 8px #0c1f31;
+    z-index: 0;
+    margin-top: 0;
+}
+
+li b {
+    color:white;
+}
+/* 
+article::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  z-index: 10;
+  background-image: url("/static/images/map.jpg");
+  opacity: .05;
+
+}
+*/
+
+h1, h2, h3, h4 {
+    color: white;
+}
+
+.form-control-cta {
+    background: #0e2439;
+    border: none;
+}
+.form-control-cta::-webkit-input-placeholder {
+    color: #7d94ab;
+    font-weight:bold;
+}
+
+.btn-cta-large {
+    background-image: linear-gradient(to right,#e052a0,#f15c41);
+    box-shadow: 0 0 24px rgba(0,0,0,.3);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.btn-cta-large:hover {
+    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+}
+
+img {
+    /* Dark sexy border */
+    /* border: 20px solid #0e2439; */
+}
+
+footer {
+    background: #193048;
+    height: 20px;
+}
+
+
+.starter-kit {
+    float: right;
+    width: 160px;
+    margin: 0;
+    margin-right: -20px;
+}
+article .screenwriters-bible {
+    width: 40%;
+    float:left;
+    margin-right:20px;
+    margin-bottom:10px;    
+}
+
+ul {
+    padding:0;
+}
+
+article .top-image {
+    margin:-20px -40px 0 -40px;
+    opacity: 0.8;
+}
+@media  (max-width: 667px) {
+    .col-centered {
+	width: 100%;
+    }
+    article {
+	padding: 20px;
+    }
+    article .top-image {
+	margin: -20px -20px 0 -20px;
+	max-width: calc(100% + 40px);
+	width: calc(100% + 40px);
+    }
+    .starter-kit {
+	margin-right: -10px;
+	width:100%;
+    }
+    .container {
+	padding: 0;
+    }
+    .row {
+	margin: 0;
+    }
+}

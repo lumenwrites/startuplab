@@ -1,0 +1,40 @@
+<div id="subscribe" class="modal fade" role="dialog">
+  <div class="modal-dialog login-modal">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+	<div class="row">
+	<div class="col-lg-12">
+
+	      <legend>Subscribe</legend>	  
+	      <!-- Join Form -->
+	      <form class="form-horizontal"
+		    method="post"
+		    action="/join/?next={{request.path}}">{% csrf_token %}
+		<!-- Username -->
+                <input class="form-control"
+		       id="id_username"  name="username"
+		       type="text" maxlength="254"
+		       placeholder="Username">
+		<br/>
+
+		<!-- Submit -->
+		<button type="submit"
+			class="btn btn-cta right">
+		  Subscribe
+		</button>
+	      </form>
+
+	</div> <!-- End .col-lg-12 -->
+
+	</div>   <!-- End .row -->
+      </div> <!-- End .modal-body -->
+    </div> <!-- End .modal-content -->
+
+
+  </div> <!-- End .modal-dialog -->
+</div>	 <!-- End .modal -->
+
+
+
+

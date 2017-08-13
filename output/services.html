@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/styles/css/vendor.css">    
+    <link rel="stylesheet" href="/static/styles/css/style.css">
+
+    <!-- Meta -->
+    <meta name="author" content="Ray Alez">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="https://startuplab.io/static/img/favicon.png"/>	
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:creator" content="@raymestalez" />
+    <meta property="twitter:site" content="@StartupLabIO" />  
+    <!-- <meta property="og:url" content="https://startuplab.io"> -->
+    <title>Startup Lab</title>
+    <meta name="description" content="Web Development and Consulting. We help founders to create, launch, and grow their online projects.">
+    <meta name="keywords" content="Web, Development, Consulting, Programming, Marketing, Startup, React, Redux, Django, Portfolio.">
+    <!-- Facebook -->
+    <meta property="og:description" content="Web Development and Consulting. We help founders to create, launch, and grow their online projects.">
+    <meta property="og:image" content="https://startuplab.io/static/img/social.png">
+    <!-- Twitter -->
+    <meta property="twitter:url" content="https://startuplab.io" />
+    <meta property="twitter:title" content="Startup Lab" />
+    <meta property="twitter:description" content="Web Development and Consulting. We help founders to create, launch, and grow their online projects." />
+    <meta property="twitter:image" content="https://startuplab.io/static/img/social.png" />
+    <!-- Feeds -->
+    <link href="/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="Startup Lab Full Atom Feed" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">      
+	<div class="col-xs-12 col-sm-4">
+	  <!-- Logo -->
+	  <div class="dropdown">
+	    <a href="https://startuplab.io" class="logo">
+	      <img src="/static/img/logo.png"/>
+	      startup<b>lab</b>
+	    </a>
+	  </div> <!-- End .dropdown -->
+	</div>
+	<!-- Menu -->
+	<div class="col-xs-12 col-sm-8">
+	  <div class="main-menu">
+
+	    <a data-toggle="modal" data-target="#subscribe" class="btn btn-default">
+	      Subscribe
+	    </a>
+	    <!-- Blog menu with categories dropdown -->
+	    <div class="dropdown">
+	      <a class="btn btn-default" href="/blog">
+		Blog
+	      </a>
+	      <ul class="dropdown-menu" role="menu">
+		<li>
+		  <a href="/meta">meta</a>
+		</li>
+		<li>
+		  <a href="/webdev">webdev</a>
+		</li>
+	      </ul>
+	    </div> <!-- End .dropdown -->
+	    
+	    <!-- Other menus from pelicanconf -->
+	    <a class="btn btn-default" href="/services">
+	      Services
+	    </a>
+
+
+	  </div>
+	</div><!-- End .col-xs-12 -->
+      </div>   <!-- End .row .cta -->
+    </div>   <!-- End .container -->
+</div>   <!-- End .main-menu -->
+</header>
+
+<div class="page">
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="container">
+      <!-- CTA -->
+      <div class="row">      
+	<div class="col-xs-12">
+	  <!-- Digital Product -->
+	  <h1>Web Development and Consulting</h1>
+	  <p class="tagline">
+	    We help founders to create, launch, and grow their online projects
+	  </p>
+	  <br/>
+	  <a class="btn btn-cta btn-large" href="#contact">
+	    Let's talk about your project!
+	    <i class="fa fa-arrow-right right"></i>
+	    <!-- 
+	    <br/>
+	    <span class="small">(Send us a message and get a free consultation)</span>
+	    -->
+	  </a>
+	</div> <!-- End .col-xs-12 -->
+      </div>   <!-- End .row .cta -->
+    </div>   <!-- End .container -->
+  </div>   <!-- End .cta -->
+  <!-- Services -->
+  <div class="services">
+    <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+	<div class="service">
+	  <h2>[Websites]</h2>
+	  <p>
+	      Design and build a fast and beautiful website for your business
+	  </p>
+	</div>
+
+	<div class="service">
+	  <h2>[Software]</h2>
+	  <p>
+	      Turn your idea into an awesome online application
+	  </p>
+	</div>
+
+	<div class="clearfix visible-xs"></div> <!-- clearfix only on mobile -->
+	<div class="service">
+	  <h2>[Consulting]</h2>
+	  <p>
+	      Solve any technical problems with your existing project
+	  </p>
+	</div>
+
+	<div class="service">
+	  <h2>[Marketing]</h2>
+	  <p>
+	      Find users, gain traction, grow your project, and sell your products
+	  </p>
+	</div>
+	  <!-- 
+	       <tr>
+		 <td>[Coaching]</td>
+		 <td>Receive useful feedback and advice,
+		   learn how to build your online business</td>
+	       </tr>
+	       -->
+	</div> <!-- End .col-xs-12 -->
+      </div>   <!-- End .row -->
+    </div>   <!-- End .container -->
+</div>	     <!-- End .services -->
+
+
+<div class="projects">
+  <div class="container">    
+    <div class="row">
+      <div class="col-xs-12">
+	<h2>Our Portfolio</h2>
+
+
+<div id="carouselProjects" class="carousel slide">
+  <!-- 
+  <ol class="carousel-indicators">
+    <li data-target="#carouselProjects" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselProjects" data-slide-to="1"></li>
+    <li data-target="#carouselProjects" data-slide-to="2"></li>    
+  </ol>
+   -->
+  <div class="carousel-inner" role="listbox">
+    <!-- Nulis -->
+    <div class="carousel-item active">
+      <a href="https://nulis.io">
+	<img class="d-block img-fluid"
+	     src="/static/img/projects/nulis.png" alt="Nulis">
+	<div class="carousel-caption">
+	  <h3>Nulis</h3>
+	  <p>Tree Editor for writers, makes the process of <br/>
+	    outlining your stories and articles easy, fun, and convenient.</p>
+	</div>
+      </a>
+    </div>
+    <!-- Fictionhub -->
+    <div class="carousel-item">
+      <a href="https://fictionhub.io">
+	<img class="d-block img-fluid"
+	     src="/static/img/projects/fictionhub.png" alt="Second slide">
+	<div class="carousel-caption">
+	  <h3>Fiction Hub</h3>
+	  <p>The discovery platform and a marketplace <br/>
+	    for online fiction.</p>
+	</div>
+      </a>
+    </div>
+    <!-- Lumiverse -->
+    <div class="carousel-item">
+      <a href="http://lumiverse.io">      
+	<img class="d-block img-fluid"
+	     src="/static/img/projects/lumiverse.png" alt="Second slide">
+	<div class="carousel-caption">
+	  <h3>Lumiverse</h3>
+	  <p>The best place to publish, discover, <br/>
+	    and discuss great educational videos.</p>
+	</div>
+      </a>
+    </div>    
+  </div>
+  <a class="carousel-control-prev"
+     href="#carouselProjects" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next"
+     href="#carouselProjects" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>	
+
+
+	<!-- Nulis -->
+	<article>
+	  <div class="screenshot">
+	    <a href="http://nulis.io">		
+	      <img src="/static/img/projects/nulis.png">
+	    </a>
+	  </div>
+	  <div class="description">
+	    <a href="http://nulis.io"> 
+	      <h3>Nulis </h3>
+	    </a>
+	    <hr/>
+	    <p>Tree Editor for writers, makes the process of outlining your stories and articles easy, fun, and convenient.
+	    </p>
+	  </div>
+	  <div class="clearfix">
+	  </div>
+	</article>
+
+	<!-- Fiction Hub -->
+	<article>
+	  <div class="screenshot">
+	    <a href="http://fictionhub.io">		
+	      <img src="/static/img/projects/fictionhub.png">
+	    </a>
+	  </div>
+	  <div class="description">
+	    <a href="http://fictionhub.io"> 
+	      <h3>Fiction Hub </h3>
+	    </a>
+	    <hr/>
+	    <p>
+	      A platform for publishing and reading fiction.
+	    </p>
+	  </div>
+	  <div class="clearfix">
+	  </div>
+	</article>
+	
+	
+	<!-- Fiction Hub -->
+	<article>
+	  <div class="screenshot">
+	    <a href="http://lumiverse.io">		
+	      <img src="/static/img/projects/lumiverse.png">
+	    </a>
+	  </div>
+	  <div class="description">
+	    <a href="http://lumiverse.io"> 
+	      <h3>Lumiverse </h3>
+	    </a>
+	    <hr/>
+	    <p>
+	      The best place to publish, discover, and discuss great educational videos.
+	    </p>
+	  </div>
+	  <div class="clearfix">
+	  </div>
+	</article>
+
+
+	<!-- WebAcademy -->
+	<article>
+	  <div class="screenshot">
+	    <a href="http://webacademy.io">		
+	      <img src="/static/img/projects/webacademy.png">
+	    </a>
+	  </div>
+	  <div class="description">
+	    <a href="http://webacademy.io"> 
+	      <h3>WebAcademy </h3>
+	    </a>
+	    <hr/>
+		<p>
+		  Discover the best learning resources for Web Developers and Startup Founders.
+		</p>
+	  </div>
+	  <div class="clearfix">
+	  </div>
+	</article>
+	
+      </div> <!-- End .col-xs-12 -->
+    </div>   <!-- End .row -->
+  </div>   <!-- End .container -->
+</div>   <!-- End .projects -->
+
+<div class="macbook-bg">
+  <div class="testimonials">
+    <img src="/static/img/quote-icon.png">
+    <p>
+      I have been working with many web development companies
+      from all around the world, <br/>
+      and I highly recommend to hire Startup Lab for your next project.
+    </p>
+    <hr/>
+    <p>
+      Rommy Arella @Candeed Creatives
+    </p>
+  </div> <!-- End .testimonials -->
+
+  <!-- Contact -->
+  <div class="contact">
+    <div class="container">    
+      <div class="row">
+	<div class="col-xs-12">    
+	  <h2 id="contact"> Contact </h2>
+	  <p>Send us a message, and get a free consultation.</p>
+	  <!-- Contact form -->
+	  <form class="form-horizontal"
+		action="https://formspree.io/ray@startuplab.io"
+		method="POST">
+            <div class="form-group">
+              <input type="email"
+		     class="form-control"
+		     name="email"
+		     placeholder="Your Email">
+              <input type="text"
+		     class="form-control"
+		     name="_subject"
+		     placeholder="Subject">
+	      <input type="hidden" name="_next" value="https://startuplab.io"/>	      
+              <textarea class="form-control"
+			name="message" 
+			placeholder="Tell us about your project..."></textarea>
+	      <br/>
+              <button type="submit" class="btn btn-cta btn-large right">
+		Send
+	      </button>
+          </form>
+
+	</div> <!-- End .col-xs-12 -->
+      </div>   <!-- End .row -->
+    </div>   <!-- End .container -->
+  </div> <!-- End .contact -->
+</div>	 <!-- End .macbook-bg -->
+
+
+
+</div>
+
+<footer>
+</footer>
+
+<div id="subscribe" class="modal fade" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+	  <form class="subscription-form"
+		action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=4d8030b35b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscription-form" target="_blank" novalidate>
+	    
+	    <input type="email" name="EMAIL"
+		   class="form-control" placeholder="email" />
+            <input name="src" type="hidden" id="email-src" />
+	    <input type="hidden"
+		   name="b_0f23c7984541d915d1108a16e_4d8030b35b"
+		   tabindex="-1" value="">	    
+	    <button class="btn btn-default" type="submit">
+	      Subscribe
+	    </button>
+	    <a class="btn btn-rss" href="/feeds/posts.atom.xml">
+	      <i class="fa fa-rss"></i>
+	    </a>
+	  </form>
+      </div>
+    </div>
+  </div>
+</div>	 <!-- End .modal -->
+
+
+
+<script src="/static/js/startuplab.min.js" async></script>
+
+</body>
+</html>

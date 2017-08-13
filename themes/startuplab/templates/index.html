@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+
+      {# {% include "elements/subscription-box.html" %} #}
+      
+      {% for article in articles_page.object_list %}
+      <article class="post">
+	<a href="{{ SITEURL }}/{{ article.url }}"><h1>{{ article.title }}</h1></a>
+	{{ article.summary }}
+
+	{% if article.has_summary %}
+	<a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Read more...</a>
+	<br/>
+	{% endif %}
+
+	{% include 'post-footer.html' %}      
+      </article>
+
+      {% endfor %} <!-- End looping through posts -->
+
+      {% include 'pagination.html' %}      
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+
+
+
+
+
+
+

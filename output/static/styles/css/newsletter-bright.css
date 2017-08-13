@@ -1,0 +1,45 @@
+body  {
+    background: #f6f3ea;
+    min-height:100vh;
+    background: #FDF5E7 url("/static/images/bg.png");
+    background-size: 150px 150px;
+}
+
+.starter-kit {
+    float: right;
+    width: 160px;
+    margin: 0;
+    margin-right: -20px;
+}
+article .screenwriters-bible {
+    width: 40%;
+    float:left;
+    margin-right:20px;
+    margin-bottom:10px;    
+}
+
+ul {
+    padding:0;
+}
+@media  (max-width: 667px) {
+    .col-centered {
+	width: 100%;
+    }
+    article {
+	padding: 20px;
+    }
+    article .top-image {
+	margin: -20px -20px 0 -20px;
+	max-width: calc(100% + 40px);
+	width: calc(100% + 40px);
+    }
+    .starter-kit {
+	margin-right: -10px;
+    }
+    .container {
+	padding: 0;
+    }
+    .row {
+	margin: 0;
+    }
+}
