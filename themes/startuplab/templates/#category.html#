@@ -1,6 +1,0 @@
-{% extends "index.html" %}
-{% block meta %}
-<title>  {{ category|capitalize }} - Startup Lab</title>
-<!-- Feeds -->
-<link href="{{ FEED_DOMAIN }}/{{ FEED_CATEGORY_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ category|capitalize }} Atom Feed" />
-{% endblock %}

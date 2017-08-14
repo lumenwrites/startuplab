@@ -26,12 +26,21 @@
 <meta name="keywords"
       content="Web, Development, Consulting, Programming, Marketing, Startup, React, Redux, Django, Portfolio, {{article.tags}}.">
 <!-- Description -->
+{% if article.description %}
 <meta name="description"
-      content="{{article.summary}}">
+      content="{{article.description}}">
 <meta property="og:description"
-      content="{{article.summary}}">
+      content="{{article.description}}">
 <meta property="twitter:description"
-      content="{{article.summary}}">
+      content="{{article.description}}">
+{% else %}
+<meta name="description"
+      content="{{article.summary|striptags}}">
+<meta property="og:description"
+      content="{{article.summary|striptags}}">
+<meta property="twitter:description"
+      content="{{article.summary|striptags}}">
+{% endif %}
 <!-- Social Image -->
 {% if article.socialimage %}
 <meta property="og:image"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Startup Lab</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2017-08-14T00:00:00-07:00</updated><entry><title>What is the best SEO web software to use?</title><link href="/post/best-seo-software" rel="alternate"></link><published>2017-08-14T00:00:00-07:00</published><updated>2017-08-14T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-08-14:/post/best-seo-software</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/startup-advice.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Startup Lab - advice</title><link href="/" rel="alternate"></link><link href="/feeds/advice.atom.xml" rel="self"></link><id>/</id><updated>2017-08-14T00:00:00-07:00</updated><entry><title>What is the best SEO web software to use?</title><link href="/post/best-seo-software" rel="alternate"></link><published>2017-08-14T00:00:00-07:00</published><updated>2017-08-14T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-08-14:/post/best-seo-software</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/startup-advice.png"&gt;&lt;/p&gt;
 &lt;p&gt;There are different kinds of software for different purposes.&lt;/p&gt;
 &lt;p&gt;There’s keyword research tools, rank tracking tools, competition analysis tools,
 backlink building tools, on page SEO plugins, etc.&lt;/p&gt;
@@ -38,77 +38,7 @@ social signals, because that’s where it matters most.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Do you have questions about building and growing an online business? Send them
 to &lt;a href="mailto:advice@startuplab.io"&gt;advice@startuplab.io&lt;/a&gt;, and I will answer the
-best ones in my future posts!&lt;/p&gt;</content><category term="SEO"></category></entry><entry><title>How can I find my first freelance clients?</title><link href="/post/find-freelance-clients" rel="alternate"></link><published>2017-08-14T00:00:00-07:00</published><updated>2017-08-14T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-08-14:/post/find-freelance-clients</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/startup-advice.png"&gt;&lt;/p&gt;
-&lt;p&gt;This is a question I get asked very often, so I’ve decided to share my
-collection of the most effective strategies that will help you get started:&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;&lt;img alt="" src="/images/startup-advice.png"&gt;&lt;/p&gt;
-&lt;p&gt;This is a question I get asked very often, so I’ve decided to share my
-collection of the most effective strategies that will help you get started:&lt;/p&gt;
-
-
-&lt;h4&gt;&lt;strong&gt;Cold emailing&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Find people in your niche and personally contact them. This is the most
-straightforward way to begin, finding people who are likely to need your service
-and making a personalized offer is free and very effective.&lt;/p&gt;
-&lt;h4&gt;&lt;strong&gt;Content Marketing&lt;/strong&gt; + &lt;strong&gt;Social Media&lt;/strong&gt;.&lt;/h4&gt;
-&lt;p&gt;Write a blog or make a YouTube channel, share free value, submit links to Hacker
-News or subreddits, use your posts to advertise your service’s landing page.
-This can be combined with smart PR/Influencer marketing(guest blog for people,
-get people to share your content), and SEO(think about long-tail very niche
-keywords that you can rank for).&lt;/p&gt;
-&lt;h4&gt;&lt;strong&gt;Engineering as marketing&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Create open source or free software that your potential clients will want to
-use, use it to drive traffic to your page. Look at
-&lt;a href="https://www.draw.io/"&gt;draw.io&lt;/a&gt; or &lt;a href="https://chapp.is/"&gt;chapp.is&lt;/a&gt; for a great
-example.&lt;/p&gt;
-&lt;h4&gt;&lt;strong&gt;Facebook ads&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Facebook ads may not be the best long term strategy, but they are an excellent
-way to quickly test your landing page and see how well it converts. Target
-audience in your niche, make an appealing ad, and spend a few buck sending
-traffic to your page, it’s very easy.&lt;/p&gt;
-&lt;h4&gt;&lt;strong&gt;Collaborate&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Find people who already have clients, and offer them to work on projects
-together(for example you can contact app designers and offer them development
-services).&lt;/p&gt;
-&lt;h4&gt;&lt;strong&gt;Referrals and word of mouth&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;This is kind of a chicken and the egg problem at the beginning, but after you
-have your first clients, they might bring more business or recommend more
-clients. Consider giving people heavy discounts at the beginning, if you think
-they will bring you more business in the future.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Do you have questions about building and growing an online business? Send them
-to &lt;a href="mailto:advice@startuplab.io"&gt;advice@startuplab.io&lt;/a&gt;, and I will answer the
-best ones in my future posts!&lt;/p&gt;</content><category term="freelance"></category></entry><entry><title>Invent the future from the future</title><link href="/post/invent-future-from-the-future" rel="alternate"></link><published>2017-08-14T00:00:00-07:00</published><updated>2017-08-14T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-08-14:/post/invent-future-from-the-future</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/startup-insights.png"&gt;&lt;/p&gt;
-&lt;p&gt;Today’s notes are from “&lt;a href="https://www.youtube.com/watch?v=id1WShzzMCQ"&gt;How to Invent the
-Future&lt;/a&gt;”, a brilliant lecture by
-Alan Kay at Startup School:&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;&lt;img alt="" src="/images/startup-insights.png"&gt;&lt;/p&gt;
-&lt;p&gt;Today’s notes are from “&lt;a href="https://www.youtube.com/watch?v=id1WShzzMCQ"&gt;How to Invent the
-Future&lt;/a&gt;”, a brilliant lecture by
-Alan Kay at Startup School:&lt;/p&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;Focus not just on problem solving, but on problem finding. You can be sure that
-95% of everything we do is wrong, inefficient, and will be changed in the
-future, but it’s hard to see that from now.&lt;/li&gt;
-&lt;li&gt;Instead of innovating out from the present, invent the future from the future.
-Imagine the world 30 years from now. Think “Wouldn’t it be ridiculous if we
-didn’t have this?”. Take this initial glimmer of an idea so far out that you
-don’t have to worry how you get there. Then bring it back closer to the present,
-identify an achievable and realistic step towards it.&lt;/li&gt;
-&lt;li&gt;Try to see technology of today as the punch card machines in the 70s, and try to
-replace them with Apple II.&lt;/li&gt;
-&lt;li&gt;Strive to &lt;strong&gt;really&lt;/strong&gt; advance something &lt;strong&gt;very&lt;/strong&gt; important. Something worth
-dedicating your life to. Pursue grand visions, not goals.&lt;/li&gt;
-&lt;li&gt;Because it is difficult, focus on milestones, not deadlines. Deadlines can be
-missed, and are hard to set up realistically when you’re doing something that’s
-never been done before. Milestones are inspiring to reach, and it’s more
-encouraging to go from one milestone to another in pursuit of a long term goal.&lt;/li&gt;
-&lt;li&gt;Don’t worry about having the perfect batting average. Total number of successes
-matters, not success/failure ratio. Failure is just overhead — an expected cost
-of trying to do hard things.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="freelance"></category></entry><entry><title>What is the meaning of difficulty level for a keyword in SEO?</title><link href="/post/keyword-difficulty" rel="alternate"></link><published>2017-08-14T00:00:00-07:00</published><updated>2017-08-14T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-08-14:/post/keyword-difficulty</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/startup-advice.png"&gt;&lt;/p&gt;
+best ones in my future posts!&lt;/p&gt;</content><category term="SEO"></category></entry><entry><title>What is the meaning of difficulty level for a keyword in SEO?</title><link href="/post/keyword-difficulty" rel="alternate"></link><published>2017-08-14T00:00:00-07:00</published><updated>2017-08-14T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-08-14:/post/keyword-difficulty</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/startup-advice.png"&gt;&lt;/p&gt;
 &lt;p&gt;The difficulty of a keyword depends on how much competition there is for it.&lt;/p&gt;
 &lt;p&gt;Basically, if there are a lot of high authority websites spending money on SEO
 for a certain keyword, you won’t be able to compete with them. That’s why you

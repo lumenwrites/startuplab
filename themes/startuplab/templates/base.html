@@ -26,9 +26,15 @@
     <meta property="twitter:title" content="Startup Lab" />
     <meta property="twitter:description" content="Web Development and Consulting. We help founders to create, launch, and grow their online projects." />
     <meta property="twitter:image" content="https://startuplab.io/static/img/social.png" />
-    <!-- Feeds -->
-    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
     {% endblock meta %}
+
+    <!-- Feeds -->
+    {% if category %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_CATEGORY_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ category|capitalize }} Atom Feed" />
+    {% else %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+    {% endif %}
+ 
 </head>
 
 <body>

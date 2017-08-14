@@ -27,6 +27,8 @@ MENUITEMS = [
     ('Services', '/services'),    
 ]
 
+# Extract date and slug from filename. 2017-08-14-hello-world.md
+FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
 
 # Urls
 ARTICLE_URL = 'post/{slug}'
