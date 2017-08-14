@@ -1,0 +1,129 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700");
+/* line 3, ../sass/optin.scss */
+article h1, .disclaimer, .btn-cta-large {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+/* line 7, ../sass/optin.scss */
+header, footer {
+  display: none;
+}
+
+/* line 10, ../sass/optin.scss */
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* line 14, ../sass/optin.scss */
+article {
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+}
+/* line 18, ../sass/optin.scss */
+article h1 {
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 0.5em;
+  margin: 20px;
+}
+@media (max-width: 960px) {
+  /* line 18, ../sass/optin.scss */
+  article h1 {
+    line-height: 1em;
+  }
+}
+/* line 29, ../sass/optin.scss */
+article h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 10px;
+}
+
+/* line 37, ../sass/optin.scss */
+.disclaimers {
+  margin: 20px;
+}
+/* line 39, ../sass/optin.scss */
+.disclaimers .disclaimer {
+  width: 33.33%;
+  float: left;
+  padding: 40px 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 22px;
+  line-height: 0.5em;
+  font-family: "Open Sans", sans-serif;
+  color: #acacac;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 960px) {
+  /* line 39, ../sass/optin.scss */
+  .disclaimers .disclaimer {
+    line-height: 1em;
+    line-height: 1em;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+  }
+  /* line 48, ../sass/optin.scss */
+  .disclaimers .disclaimer br {
+    display: none;
+  }
+}
+
+/* line 63, ../sass/optin.scss */
+#leftmost {
+  border: none;
+}
+
+/* line 66, ../sass/optin.scss */
+.btn-cta-large {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px 40px;
+  margin: 20px;
+  background: #eb5d00;
+  color: #fff;
+  /* font-family: "brandon_grotesquebold"; */
+  font-weight: 300;
+  background: linear-gradient(to bottom, #ff6500, #f84200);
+  box-shadow: 0 0 30px 2px rgba(34, 34, 34, 0.5);
+}
+/* line 78, ../sass/optin.scss */
+.btn-cta-large:hover, .btn-cta-large:active, .btn-cta-large:focus, .btn-cta-large:visited {
+  background: linear-gradient(to bottom, #ff6500, #f84200);
+  box-shadow: 0 0 30px 2px rgba(34, 34, 34, 0.5);
+}
+@media (max-width: 960px) {
+  /* line 66, ../sass/optin.scss */
+  .btn-cta-large {
+    white-space: normal;
+    margin: 20px -20px;
+  }
+}
+/* line 86, ../sass/optin.scss */
+.btn-cta-large .download-icon {
+  margin: -20px -40px -20px 10px;
+  padding: 20px;
+  float: right;
+  display: inline;
+  /* background: #ff7a24; */
+}
+@media (max-width: 960px) {
+  /* line 86, ../sass/optin.scss */
+  .btn-cta-large .download-icon {
+    display: none;
+  }
+}
+/* line 95, ../sass/optin.scss */
+.btn-cta-large .download-icon i {
+  font-size: 32px;
+  width: 32px;
+  margin: 0;
+}

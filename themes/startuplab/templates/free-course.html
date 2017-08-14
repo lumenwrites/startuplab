@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container post-detail">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 post-detail">
+      <article class="post">
+	<img src="/static/img/logo.png" class="logo"/>
+	<h2>Get your Free</h2>
+	<h1>
+	  Online Business <br/>
+	  Quick Start Guide <!-- Course -->
+	</h1>
+	<button class="btn btn-cta-large" type="submit">
+	  Download Now
+	  <div class="download-icon">
+	  <i class="fa fa-cloud-download"></i>
+	  </div>
+	</button>
+	<div class="disclaimers">
+	  <div class="disclaimer" id="leftmost">
+	    100% free <br/>
+	    training
+	  </div>
+	  <div class="disclaimer">
+	    Get Started with  <br/>
+	    Zero Investment
+	  </div>
+	  <div class="disclaimer">
+	    No experience <br/>
+	    needed
+	  </div>
+	</div>
+	<div class="clearfix"></div>
+      </article>
+    </div> <!-- End col-md-12 -->
+  </div>   <!-- End .row -->
+</div>	   <!-- end .container -->
+
+{% endblock %}
+
+{% block meta %}
+<title>Free Course</title>
+<link rel="stylesheet" href="/static/styles/css/optin.css">
+{% endblock %}
