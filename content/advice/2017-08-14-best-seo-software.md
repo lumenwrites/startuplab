@@ -1,7 +1,6 @@
 Title: What is the best SEO web software to use?
 Tags: seo
 SocialImage: startup-advice.png
-RedditLink: test
 
 ![](/images/startup-advice.png)
 

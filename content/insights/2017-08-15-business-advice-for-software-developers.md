@@ -1,7 +1,6 @@
 Title: Business advice for software developers
 Tags: business, marketing, hacker-news
 SocialImage: startup-insights.png
-RedditLink: test
 
 ![](/images/startup-insights.png)
 

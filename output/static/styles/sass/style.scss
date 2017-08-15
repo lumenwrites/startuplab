@@ -19,6 +19,14 @@ header {
     .logo {
 	font-size: 32px;
 	font-weight: 100;
+	@media  (max-width: 576px) {
+	    float:none;
+	    margin: auto;
+	    width: fit-content;
+	    padding-right: 15px;
+	    margin-bottom: 15px;
+	}	
+
 	b {
 	    font-weight: 400;	    
 	}
@@ -32,8 +40,10 @@ header {
     .main-menu {
 	padding-top: 5.5px;
 	float: right;
-	@media  (max-width: 960px) {
-	    float:left;
+	@media  (max-width: 576px) {
+	    float:none;
+	    margin: auto;
+	    width: fit-content;
 	}	
 	.btn {
 	    background: none;
@@ -43,6 +53,11 @@ header {
 	    border: 1px solid rgba(0,0,0,0.1);
 	    margin-right:5px;
 	    border-radius: 0;
+	    @media  (max-width: 720px) {
+		padding: 10px;
+		margin-right:2px;		
+	    }	
+	    
 	    &:hover {
 		background-color: #eeeeee;
 	    }
