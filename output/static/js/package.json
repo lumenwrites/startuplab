@@ -14,6 +14,8 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "jquery": "^3.2.1",
+    "jquery-query-object": "^2.2.3",
+    "js-cookie": "^2.1.4",
     "tether": "^1.4.0"
   },
   "devDependencies": {

@@ -1,3 +1,6 @@
+import 'jquery-query-object';
+import Cookies from 'js-cookie';
+
 $(document).ready(function(){
 
     /* Portfolio carousel */
@@ -9,6 +12,33 @@ $(document).ready(function(){
 	},
 	allowPageScroll:"vertical"
     });
+
+    /* Subscribed notification */
+    /* 
+    var notification = $.query.get('notification');
+    if (notification == "subscribed") {
+	$(".alert").show();
+	console.log("Subscription box closed!");
+	Cookies.set('subscription_box_closed', 'yes', { expires: 500 });
+	$(".alert").delay(3000).fadeOut();	
+    }
+    */
+
+    /* Set src cookie */
+    var source = $.query.get('src');
+    if (source) {
+	Cookies.set('src', source, { expires: 10 });	
+    } else {
+	/* If there's no src in url, try getting source from cookies */
+	source = Cookies.get('src');
+    }
+    if (source) {
+	$("#email-src").val(source);
+	$("#email-src-modal").val(source);
+	$("#email-src-newsletter").val(source);					
+    }
+
+    
 
     /* Google Analytics */
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

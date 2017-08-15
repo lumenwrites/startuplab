@@ -18,20 +18,22 @@ function getPlugins() {
                 warnings: false
             }
         }));
-	// inject ES5 modules as global vars
-        plugins.push(
-	    new webpack.ProvidePlugin({
-		$: 'jquery',
-		jQuery: 'jquery',
-		'window.jQuery': 'jquery',
-		Tether: 'tether'
-	    })); 
-	
     }
+    // inject ES5 modules as global vars
     plugins.push(new webpack.ProvidePlugin({
 	$: 'jquery',
 	jQuery: 'jquery'
     }));
+
+    plugins.push(
+	new webpack.ProvidePlugin({
+	    $: 'jquery',
+	    jQuery: 'jquery',
+	    'window.jQuery': 'jquery',
+	    Tether: 'tether'
+	})
+    ); 
+    
 
     return plugins;
 }
