@@ -1,6 +1,7 @@
 Title: Business advice for software developers
 Tags: business, marketing, hacker-news
 SocialImage: startup-insights.png
+HNLink: https://news.ycombinator.com/item?id=15015495
 
 ![](/images/startup-insights.png)
 
