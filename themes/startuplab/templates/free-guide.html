@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container post-detail">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 post-detail">
+      <article class="post">
+	<img src="/static/img/logo.png" class="logo"/>
+	<h2>Get your Free Guide to</h2>
+	<h1>
+	  Generating profitable ideas <br/>
+	  for your first Online Business
+	</h1>
+
+	<!-- Subscription form -->
+	  <form class="subscription-form"
+		action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=4d8030b35b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscription-form" target="_blank" novalidate>
+	    
+	    <input type="email" name="EMAIL"
+		   class="form-control" placeholder="Enter your email..." />
+            <input name="SRC" type="hidden" id="email-src" />
+            <input name="OPTINLOC" type="hidden" value="free-guide" />	    
+	    <input type="hidden"
+		   name="b_0f23c7984541d915d1108a16e_4d8030b35b"
+		   tabindex="-1" value="">	    
+	    <button class="btn btn-cta-large" type="submit">
+	      Download Now
+	      <div class="download-icon">
+		<i class="fa fa-cloud-download"></i>
+	      </div>
+	    </button>
+	  </form>
+	
+	<div class="disclaimers">
+	  <div class="disclaimer" id="leftmost">
+	    100% free <br/>
+	    training
+	  </div>
+	  <div class="disclaimer">
+	    Get Started with  <br/>
+	    Zero Investment
+	  </div>
+	  <div class="disclaimer">
+	    No experience <br/>
+	    needed
+	  </div>
+	</div>
+	<div class="clearfix"></div>
+      </article>
+    </div> <!-- End col-md-12 -->
+  </div>   <!-- End .row -->
+</div>	   <!-- end .container -->
+
+{% endblock %}
+
+{% block meta %}
+<title>Free Guide</title>
+<link rel="stylesheet" href="/static/styles/css/optin.css">
+{% endblock %}

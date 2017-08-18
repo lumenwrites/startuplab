@@ -49,7 +49,7 @@ INDEX_SAVE_AS = 'blog.html'
 AUTHOR_SAVE_AS = ''
 
 # Directly use page
-DIRECT_TEMPLATES = ('index','services','newsletter','free-course',)
+DIRECT_TEMPLATES = ('index', 'home', 'services','newsletter','free-guide','thankyou',)
 
 
 # Specify a customized theme, via path relative to the settings file
