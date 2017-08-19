@@ -27,7 +27,7 @@ using JS).
 ![](/images/webdev-roadmap-2-html-js-css.jpeg)
 
 The best way to learn the basics is to go through [The Web Developer Bootcamp on
-Udemy](https://www.udemy.com/the-web-developer-bootcamp/)
+Udemy](https://www.udemy.com/the-web-developer-bootcamp/).
 
 It will take you through the process of creating your first website, and give
 you a great place to get started.
@@ -106,8 +106,8 @@ you the “right” things to use.
 
 ![](/images/webdev-roadmap-6-hosting.png)
 
-To buy a domain names you will use [Namecheap](https://www.namecheap.com/)**.
-**As the name implies, it has very good prices, and also an excellent user
+To buy domain names you will use [Namecheap](https://www.namecheap.com/).
+As the name implies, it has very good prices, and also an excellent user
 experience.
 
 To host your first pages, you should use [Bluehost](https://www.bluehost.com/),
@@ -118,7 +118,7 @@ you need.
 
 Finally, when you will go further and gain more skill — you will need a
 VPS(virtual private server). It is, to put it simply, a remote computer you have
-a complete control over, and will use to serve the sites you have built with
+the complete control over, and will use to serve the sites you have built with
 frameworks. I highly recommend using
 [DigitalOcean](https://www.digitalocean.com/), it has great prices, beautiful
 and intuitive interface, and I’ve been happily using it to host all of my
@@ -136,26 +136,26 @@ To do that, the best place to begin is learning one of the backend frameworks.
 Backend frameworks run on server, and dynamically generate html for a website
 every time the user visits a url.
 
-As always, there are hundreds of options, but I will help you to narrow it down
+As always, there are dozens of options, but I will help you to narrow it down
 to 3 — **Django**, **Ruby on Rails**, and **Node/Express**.
 
 ![](/images/webdev-roadmap-7-django.png)
 
-The opinions on which one should you learn first will differ among different
+The opinions on which one you should learn first will differ among different
 developers, but I strongly recommend you to begin with Django, and then learn
 Node/Express.
 
 The major advantage of Django is that it is written in Python — a beautiful,
-powerful language that is used in every field you can imagine, and at the same
+powerful language that is used in every field you can imagine, and at the same is
 time the best choice for your first programming language.
 
-Django itself is straightforward, flexible, has excellent documentation, and all
+Django itself is straightforward, powerful, flexible, has excellent documentation, and all
 the tools you’re going to need to build 95% of the websites. More importantly —
 it will give you an excellent framework for thinking about the backend code, and
-understanding is an excellent way to learn the core fundamentals of web
+understanding it is an excellent way to learn the core fundamentals of web
 development in general.
 
-My favorite introduction to Django is Tuts+ course [Getting Started with Django](https://code.tutsplus.com/courses/getting-started-with-django), and the best way to go from a beginner to intermediate/advanced is an excellent
+My favorite introduction to Django is the TutsPlus course [Getting Started with Django](https://code.tutsplus.com/courses/getting-started-with-django), and the best way to go from a beginner to intermediate/advanced is an excellent
 book [Two Scoops of Django](https://www.twoscoopspress.com/products/two-scoops-of-django-1-8).
 
 Also, I highly recommend [free youtube
@@ -164,11 +164,13 @@ Hibbert’s.
 
 ### Node and Express
 
-Node and Express are extremely powerful tools that I highly recommend you to
+Node and Express are extremely powerful tools that I recommend you to
 learn after Django. They might be a bit tough for a beginner, but if you have an
 understanding of Django — you will learn them very quickly and naturally.
 
 ![](/images/webdev-roadmap-8-node.jpeg)
+
+Node has many advantages, and the best way to experience them is to try it for yourself. Often it will enable you to build websites much quicker than you would with Django, you will understand a lot of backend programming concepts in more depth, have an easier time building APIs, real-time webapps(like a chat or a game), and progressive webapps(you'll encounter them when you will learn React). 
 
 The best course I have encountered is [Learn and Understand NodeJS](https://www.udemy.com/understand-nodejs/).
 
