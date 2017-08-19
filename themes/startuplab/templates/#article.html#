@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container post-detail">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 post-detail">
+      <article class="post">
+	<a href="{{ SITEURL }}/{{ article.url }}"><h1>{{ article.title }}</h1></a>
+	{{ article.content }}
+	{% include 'post-footer.html' %}      
+      </article>
+
+      {% include "subscription-box.html" %}
+      {% include "post-suggestions.html" %}
+      <br/>
+    </div> <!-- End col-md-12 -->
+  </div>   <!-- End .row -->
+</div>	   <!-- end .container -->
+{% endblock %}
+
+
+{% block meta %}
+<title>{{article.title}} - Startup Lab</title>
+<meta property="twitter:title" content="{{article.title}} - Startup Lab" />
+<!-- Meta -->
+<meta name="keywords"
+      content="Web, Development, Consulting, Programming, Marketing, Startup, React, Redux, Django, Portfolio, {{article.tags}}.">
+<!-- Description -->
+{% if article.description %}
+<meta name="description"
+      content="{{article.description}}">
+<meta property="og:description"
+      content="{{article.description}}">
+<meta property="twitter:description"
+      content="{{article.description}}">
+{% else %}
+<meta name="description"
+      content="{{article.summary|striptags}}">
+<meta property="og:description"
+      content="{{article.summary|striptags}}">
+<meta property="twitter:description"
+      content="{{article.summary|striptags}}">
+{% endif %}
+<!-- Social Image -->
+{% if article.socialimage %}
+<meta property="og:image"
+      content="https://startuplab.io/images/{{article.socialimage}}" />    
+<meta property="twitter:image"
+      content="https://startuplab.io/images/{{article.socialimage}}" />    
+{% else %}
+<meta property="og:image"
+      content="https://startuplab.io/static/img/social.png">    
+<meta property="twitter:image"
+      content="https://startuplab.io/static/img/social.png" />
+{% endif %}    
+
+<!-- Feeds -->
+<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+
+{% endblock meta %}

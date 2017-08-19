@@ -51,6 +51,9 @@ AUTHOR_SAVE_AS = ''
 # Directly use page
 DIRECT_TEMPLATES = ('index', 'home', 'services','newsletter','free-guide','thankyou',)
 
+# Disable empty alt warning log message
+import logging
+LOG_FILTER = [(logging.WARN, 'Empty alt attribute for image %s in %s')]
 
 # Specify a customized theme, via path relative to the settings file
 THEME = "themes/startuplab"
