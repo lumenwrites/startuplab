@@ -181,7 +181,7 @@ developer with the power to create many kinds of websites. If you want to become
 a Full-Stack developer — welcome to the world of frontend frameworks.
 
 Frontend frameworks will enable you to create powerful single-page applications.
-At this point you’re essentially making an application that runs completely the
+At this point you’re essentially making an application that runs completely in the
 browser, occasionally exchanging data with server.
 
 ![](/images/webdev-roadmap-9-react.jpeg)
