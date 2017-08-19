@@ -241,4 +241,4 @@ If you have questions, comments, or are looking for advice, don’t hesitate to
 message me to **webdevadvice@startuplab.io.**
 
 Also, if you’re interested in more articles on web development, startups, and
-building your online business —go ahead and subscribe to my weekly newsletter!
+building your online business - go ahead and subscribe to my weekly newsletter!
