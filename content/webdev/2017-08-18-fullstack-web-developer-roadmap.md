@@ -231,7 +231,7 @@ I hope this article was useful to you. Obviously, it’s impossible to cover
 everything about this deep, complex, and rapidly evolving field in one article, but
 I believe that topics and resources above will give you a clear vision of the
 path ahead, and a useful roadmap to follow. At least, this is the kind of
-article I wish I had available for me a few years ago.
+article I wish was available to me a few years ago.
 
 You will certainly learn more as you follow along, and go into depth into the
 topics that interest you the most, but now I think your path will be much more
