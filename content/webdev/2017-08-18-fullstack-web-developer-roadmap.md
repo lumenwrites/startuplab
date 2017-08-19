@@ -201,7 +201,7 @@ The author of these courses, Stephen Grider, is an absolutely brilliant teacher,
 he explains everything incredibly well, and you will have a ton of fun learning
 all the complexities of these technologies by following his courses.
 
-I highly recommend you to create a website with Node, and React/Redux, because
+I highly recommend you to create a website with Node and React/Redux, because
 it will really help you to grasp how to create and use REST APIs, and combine
 the whole set of technologies into a powerful and useful software.
 
