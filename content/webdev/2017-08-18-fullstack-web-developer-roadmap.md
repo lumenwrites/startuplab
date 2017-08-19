@@ -223,10 +223,7 @@ elegant and convenient.
 
 ![](/images/webdev-roadmap-11-docker.jpeg)
 
-Personally, I have learned Docker from [this course](https://www.udemy.com/docker-tutorial-for-devops-run-docker-containers).
-
-And I’m very happy with it. This course is short, straightforward, to the point,
-and easy to understand.
+Personally, I have learned Docker from [this course](https://www.udemy.com/docker-tutorial-for-devops-run-docker-containers), and I’m very happy with it. This course is short, straightforward, to the point, and easy to understand.
 
 ### Conclusion
 
