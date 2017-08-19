@@ -227,8 +227,8 @@ Personally, I have learned Docker from [this course](https://www.udemy.com/docke
 
 ### Conclusion
 
-I hope this article was useful to you. Obviously it’s impossible to cover
-everything in this deep, complex, and rapidly evolving field in one article, but
+I hope this article was useful to you. Obviously, it’s impossible to cover
+everything about this deep, complex, and rapidly evolving field in one article, but
 I believe that topics and resources above will give you a clear vision of the
 path ahead, and a useful roadmap to follow. At least, this is the kind of
 article I wish I’ve had available for me a few years ago.
