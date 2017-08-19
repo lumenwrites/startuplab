@@ -234,8 +234,8 @@ path ahead, and a useful roadmap to follow. At least, this is the kind of
 article I wish was available to me a few years ago.
 
 You will certainly learn more as you follow along, and go into depth into the
-topics that interest you the most, but now I think your path will be much more
-straightforward and much less confusing.
+topics that interest you the most, but I think that now your path will be much more
+straightforward and less confusing.
 
 If you have questions, comments, or are looking for advice, don’t hesitate to
 message me to **webdevadvice@startuplab.io.**
