@@ -172,7 +172,7 @@ understanding of Django — you will learn them very quickly and naturally.
 
 Node has many advantages, and the best way to experience them is to try it for yourself. Often it will enable you to build websites much quicker than you would with Django, you will understand a lot of backend programming concepts in more depth, have an easier time building APIs, real-time webapps(like a chat or a game), and universal webapps(you'll encounter them when you will learn React). 
 
-The best course I have encountered is [Learn and Understand NodeJS](https://www.udemy.com/understand-nodejs/).
+The best course I have encountered is [The Complete NodeJS Developer Course](https://www.udemy.com/the-complete-nodejs-developer-course-2).
 
 ### Frontend Frameworks
 
