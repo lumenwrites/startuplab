@@ -1,6 +1,7 @@
 Title: Full-Stack Web Development - the Complete Roadmap
 Tags: backend,frontend,devops
 SocialImage: webdev-roadmap-1.jpeg
+RedditLink: https://www.reddit.com/r/IndieFounders/comments/6v9bnv/fullstack_web_development_the_complete_roadmap/
 
 ![](/images/webdev-roadmap-1.jpeg)
 

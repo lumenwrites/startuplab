@@ -24,7 +24,7 @@ AUTHOR_FEED_RSS = None
 
 # Menu
 MENUITEMS = [
-    ('Services', '/services'),    
+    ('Services', '/services'),
 ]
 
 # Extract date and slug from filename. 2017-08-14-hello-world.md
