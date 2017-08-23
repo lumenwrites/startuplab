@@ -10,10 +10,10 @@
       </a>
 
       {% include "subscription-box.html" %}
-
+      {% include "post-suggestions.html" %}
 
       <!-- Post Suggestions -->
-      <div class="post-suggestions">
+      <div class="post-suggestions series">
 	<div class="row">
 	  <div class="col-xs-12 col-sm-3">
 	    <a href="/post/what-should-i-learn-as-a-founder">
@@ -98,9 +98,10 @@
       {% endfor %} <!-- End looping through posts -->
       
 <style>
-  .post-suggestions {
+  .series {
   padding: 0 10px;
   }
+
 .post-suggestions .col-sm-3 {
     padding-left: 5px;
     padding-right: 5px;
