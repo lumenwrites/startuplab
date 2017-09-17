@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="container">
+      <!-- CTA -->
+      <div class="row">      
+	<div class="col-xs-12">
+	  <img src="/static/img/logo-transparent.png" class="logo" />
+	  <!-- Digital Product -->
+	  <h1>Online Business Academy</h1>
+	  <!-- 
+	  <h1>
+	    Generating profitable ideas <br/>
+	    for your first Online Business
+	  </h1>
+	  -->
+	  <br/>
+
+	<!-- Subscription form -->
+	<!-- Aweber -->
+	  <form class="subscription-form"
+		action="https://www.aweber.com/scripts/addlead.pl"
+		method="post">
+	    
+	    <input type="email" name="email"
+		   class="form-control" placeholder="Enter your email..." />
+
+	    <!-- Tracking -->
+            <input name="src" type="hidden" id="email-src" />
+            <input name="optinloc" type="hidden" value="free-course" />
+
+	    <!-- Hidden -->
+	    <input type="hidden" name="listname"
+		   value="awlist4795744" />
+	    <input type="hidden" name="redirect"
+		   value="https://onlinebusinessacademy.io/thankyou"/>
+	    <input type="hidden" name="meta_adtracking"
+		   value="OBA_Optin" />
+	    <input type="hidden" name="meta_message"
+		   value="1" />
+	    <input type="hidden" name="meta_required"
+		   value="email" />
+	    <input type="hidden" name="meta_forward_vars" value="1" /> 
+	    
+	    <button class="btn btn-cta btn-large" href="#contact" type="submit">
+	      <div>
+		Get your free online business<br/>
+		<span class="bolder">quick start guide</span>
+	      </div>
+	    </button>
+	  </form>
+	  
+
+    </div>
+</form>
+</div>
+	  
+
+	</div> <!-- End .col-xs-12 -->
+      </div>   <!-- End .row .cta -->
+    </div>   <!-- End .container -->
+  </div>   <!-- End .cta -->
+
+
+  <!-- Services -->
+  <div class="disclaimers">
+    <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+	<h1> Build your first profitable Online Business </h1>
+	<br/>
+	<div class="service" id="leftmost">
+	  <!-- <i class="fa fa-users" aria-hidden="true"></i> -->
+	  <img src="/static/img/experts-decolor.png" />
+	  <!-- <h2>Learn from <br/> -->
+	  <!--   leading Experts</h2> -->
+	  <h2>Kick-start <br/>
+	     your business</h2>
+	</div>
+
+	<div class="service">
+	  <img src="/static/img/no-investment-decolor.png" />	  
+	  <h2>Get Started with <br/>
+	    Zero Investment</h2>
+	</div>
+
+	<div class="clearfix visible-xs"></div> <!-- clearfix only on mobile -->
+	<div class="service">
+	  <img src="/static/img/no-experience-decolor.png" />	  	  
+	  <h2>No experience <br/>
+	    needed</h2>
+	</div>
+
+	</div> <!-- End .col-xs-12 -->
+      </div>   <!-- End .row -->
+
+    </div>   <!-- End .container -->
+    
+</div>	     <!-- End .services -->
+  
+
+  <!-- Social Proof -->
+  <div  class="social-proof">
+    <div class="container">
+      <div class="row">
+	<div class="col-xs-12">
+	  
+	  <img src="/static/img/social-proof.png"/>
+
+	</div> <!-- End .col-xs-12 -->
+      </div>   <!-- End .row -->
+    </div>   <!-- End .container -->
+  </div> <!-- End .services -->
+  
+
+{% endblock content %}
+
+{% block meta %}
+  <link rel="stylesheet" href="/static/styles/css/optin.css">
+{% endblock meta %}  
