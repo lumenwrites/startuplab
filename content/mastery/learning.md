@@ -1,9 +1,9 @@
 Title: Principles of learning
 Date: 2016-06-04
-Image: https://medium2.global.ssl.fastly.net/max/2000/0*oPdaWM8EP7BotLVE.jpg
+Image: https://cdn-images-1.medium.com/max/2000/0*oPdaWM8EP7BotLVE.jpg
 Summary: How to be efficient at learning new skills.
 
-![](https://medium2.global.ssl.fastly.net/max/2000/0*oPdaWM8EP7BotLVE.jpg)
+![](https://cdn-images-1.medium.com/max/2000/0*oPdaWM8EP7BotLVE.jpg)
 
 Here are my favorite principles of learning, ideas that will help you to acquire skill in the fastest and the most efficient way.
 
@@ -36,7 +36,7 @@ Don’t rely on your subconsciousness. Don’t expect to get good by mindlessly 
 
 Start with doing things slowly, understand each step. And *then* your brain gets used to it and automates the process, which enables you to do it faster or focus on more precise details. But don’t try to skip to this part, don’t hope that you can get good without detailed understanding of how you’re doing it, understanding always comes first.
 
-![](https://medium2.global.ssl.fastly.net/max/2000/0*F7Hu2xLZNEt0OlDn.png)
+![](https://cdn-images-1.medium.com/max/2000/0*F7Hu2xLZNEt0OlDn.png)
 
 ###Learn to get in the flow.
 

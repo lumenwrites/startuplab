@@ -1,10 +1,10 @@
 Title: Tips on achieving the flow
 Slug: flow
 Date: 2016-06-04
-Image: https://medium2.global.ssl.fastly.net/max/2000/0*m5GeSfHJOhQC_xKa.jpg
+Image: https://cdn-images-1.medium.com/max/2000/0*m5GeSfHJOhQC_xKa.jpg
 Summary: Flow is an amazing state that you enter when you’re completely immersed into some activity.
 
-![](https://medium2.global.ssl.fastly.net/max/2000/0*m5GeSfHJOhQC_xKa.jpg)
+![](https://cdn-images-1.medium.com/max/2000/0*m5GeSfHJOhQC_xKa.jpg)
 
 ##Tips on achieving the flow
 
@@ -25,7 +25,7 @@ The first thing that you need is a simple, unambiguous goal that you value and k
 
 If what you want to do is a big and complicated task — break it down into multiple smaller ones, then breakdown the first of them into several parts again, and do that until you have an easy first step that takes 20 minutes or less to accomplish. By the way this goal setting, breaking down, and planning often IS the first easy step to focus on.
 
-![](https://medium2.global.ssl.fastly.net/max/2000/0*rQBmbr9dfft3IE_0.png)
+![](https://cdn-images-1.medium.com/max/2000/0*rQBmbr9dfft3IE_0.png)
 
 Also notice that the goal should be at the right level for you, it should be simple enough for you to feel confident and competent, yet challenging enough to be interesting. Ideally, your task should be a *little* bit more challenging than you’re used to.
 

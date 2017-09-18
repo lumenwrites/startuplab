@@ -1,16 +1,16 @@
 Title: Using tracking to develop daily habits
 Date: 2016-07-31
-Image: https://medium2.global.ssl.fastly.net/max/2000/1*wY5QLXRgOxYzl4Blh712eg.jpeg
+Image: https://cdn-images-1.medium.com/max/2000/1*wY5QLXRgOxYzl4Blh712eg.jpeg
 Slug: habits
 Summary: Using tracking to develop daily habits
 
-![](https://medium2.global.ssl.fastly.net/max/3072/1*KJhDfHZZaowWivyaemZXTA.png)
+![](https://cdn-images-1.medium.com/max/3072/1*KJhDfHZZaowWivyaemZXTA.png)
 
 For quite a long time I’ve been trying to develop good daily habits, and tracking my progress. I’ve been tweaking and improving my system a lot, and at this point it has pretty much stabilized, so I think it’s time to share what I’ve learned.
 
 For tracking I’m using a great app [TracknShare](https://itunes.apple.com/us/app/track-share-lite-universal/id338964782?mt=8), although a simple text file worked well for me too. For tracking with text I’ve used an Emacs org-mode and it looked like this:
 
-![](https://medium2.global.ssl.fastly.net/max/2000/1*fiJzRMgQgTEEwu0-WG3kIg.png)
+![](https://cdn-images-1.medium.com/max/2000/1*fiJzRMgQgTEEwu0-WG3kIg.png)
 
 I’ve been thinking a lot about the most important habits I want to develop, and ended up with this list:
 
@@ -44,7 +44,7 @@ It’s good to dedicate a week or a month to one habit, then move on to the next
 
 Instead of simple yes or no checkboxes, TracknShare allows to select different “grades” for each habit. After some experimentation, I have found that having 3 grades works best for me:
 
-![](https://medium2.global.ssl.fastly.net/max/2000/1*wY5QLXRgOxYzl4Blh712eg.jpeg)
+![](https://cdn-images-1.medium.com/max/2000/1*wY5QLXRgOxYzl4Blh712eg.jpeg)
 
 When you are just getting started, it’s best to aim for the minimal, most basic version of the habit, just the action necessary to sustain it and keep thinking about it every day. This should be something you can’t fail at.
 

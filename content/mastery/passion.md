@@ -1,10 +1,10 @@
 Title: For those who are trying to find their passion
 Date: 2016-07-21
-Image: https://medium2.global.ssl.fastly.net/max/2000/1*Ki8T_0SLYkuXFo-w68QMVQ.png
+Image: https://cdn-images-1.medium.com/max/2000/1*Ki8T_0SLYkuXFo-w68QMVQ.png
 Summary: Ultimately, man should not ask what the meaning of his life is, but rather must recognize that it is he who is asked.
 
 
-![](https://medium2.global.ssl.fastly.net/max/2000/1*Ki8T_0SLYkuXFo-w68QMVQ.png)
+![](https://cdn-images-1.medium.com/max/2000/1*Ki8T_0SLYkuXFo-w68QMVQ.png)
 
 > “Ultimately, man should not ask what the meaning of his life is, but rather must recognize that it is he who is asked.”
 

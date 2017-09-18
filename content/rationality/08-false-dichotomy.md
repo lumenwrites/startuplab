@@ -1,10 +1,10 @@
 Title: False Dichotomy
 Date: 2016-06-04
-Image: https://medium2.global.ssl.fastly.net/max/3200/1*aIbynppEMamCrQSqQx6enQ.jpeg
+SocialImage: https://cdn-images-1.medium.com/max/3200/1*aIbynppEMamCrQSqQx6enQ.jpeg
 Summary: Taking a complex issue and boiling it down to 2 options when there’s more alternatives available.
 
 
-![](https://medium2.global.ssl.fastly.net/max/3200/1*aIbynppEMamCrQSqQx6enQ.jpeg)
+![](https://cdn-images-1.medium.com/max/3200/1*aIbynppEMamCrQSqQx6enQ.jpeg)
 
 False Dichotomy means taking a complex issue, and boiling it down to 2 simple mutually exclusive choices, when in reality there’s more alternatives available. To make their side look more appealing, people present nuanced arguments as black and white, or take extremes and pretend like they are the only options.
 

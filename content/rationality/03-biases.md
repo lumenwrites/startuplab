@@ -3,7 +3,6 @@ Date: 2016-04-03 00:03
 SocialImage: /images/rationality/biases/biases-1.png
 Summary: Our brain takes mental shortcuts that distort our picture of the world.
 
-
 ![](/images/rationality/biases/biases-1.png)
 Imagine you have a basket of fruits(apples and oranges), you reach out, take one at random, and eat it. Then you decide you’re hungry, and eat a few more. At that point you realize that you ate like 5 apples and only one orange, so you think that there’s way more apples in there. Makes sense.
 

@@ -1,10 +1,10 @@
 Title: Tips on self-control and will power
 Slug: will-power
 Date: 2016-06-04
-Image: https://medium2.global.ssl.fastly.net/max/2000/0*34FBGQCQNsJmVhky.jpg
+Image: https://cdn-images-1.medium.com/max/2000/0*34FBGQCQNsJmVhky.jpg
 Summary: How to be proactive, stay consistent and do what you think is right.
 
-![](https://medium2.global.ssl.fastly.net/max/2000/0*34FBGQCQNsJmVhky.jpg)
+![](https://cdn-images-1.medium.com/max/2000/0*34FBGQCQNsJmVhky.jpg)
 
 
 ###How to be proactive, stay consistent and do what you think is right.
@@ -29,7 +29,7 @@ And what you need to do — is to learn to distinguish the “real”, rational 
 
 You can think rationally and make real decisions about diet when you’re in a comfortable, not hungry state, but if you get hungry — don’t trust your brain, what you’re thinking about has nothing to do with logic.
 
-![](https://medium2.global.ssl.fastly.net/max/2000/0*aPNxwpH83024sW95.png)
+![](https://cdn-images-1.medium.com/max/2000/0*aPNxwpH83024sW95.png)
 
 Another good way to call this is “trusting in your higher self”. There are moments in your life when your mind is bright, sharp, alert — when you can think clearly and make the best decisions. That’s your “higher self”. And then there are moments when you’re angry/hungry/horny/lazy/sleepy/etc, when you’re in haze and out of state, when you can’t think clearly.
 

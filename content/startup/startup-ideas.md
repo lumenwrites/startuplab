@@ -1,9 +1,9 @@
 Title: How do you come up with startup ideas?
 Date: 2016-07-22
-Image: https://medium2.global.ssl.fastly.net/max/2000/0*jJ3dy-ho5lYkPADu.png
+Image: https://cdn-images-1.medium.com/max/2000/0*jJ3dy-ho5lYkPADu.png
 Summary: Here’s my reply to a person who asked this question
 
-![](https://medium2.global.ssl.fastly.net/max/2000/0*jJ3dy-ho5lYkPADu.png)
+![](https://cdn-images-1.medium.com/max/2000/0*jJ3dy-ho5lYkPADu.png)
 
 Here’s my reply to a person who asked this question:
 

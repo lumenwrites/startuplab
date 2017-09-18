@@ -1,9 +1,9 @@
 Title: Anchoring Bias
 Date: 2016-07-23
-Image: https://medium2.global.ssl.fastly.net/max/2560/1*OzzD7O4yEUaCadcM4XBrsw.jpeg
+Image: https://cdn-images-1.medium.com/max/2560/1*OzzD7O4yEUaCadcM4XBrsw.jpeg
 Summary: People rely too heavily on the piece of information that they have received first.
 
-![](https://medium2.global.ssl.fastly.net/max/2560/1*OzzD7O4yEUaCadcM4XBrsw.jpeg)
+![](https://cdn-images-1.medium.com/max/2560/1*OzzD7O4yEUaCadcM4XBrsw.jpeg)
 
 Let’s say I spin a wheel, with numbers ranging from 1 to 100. Then I ask you to guess a number of countries in Africa. Turns out, statistically, your answer will be much lower if the wheel has showed number 16 than if the wheel would have showed 87. Why would that happen? The number is clearly random and has nothing to do with the correct answer.
 
