@@ -212,24 +212,103 @@
     }
 }
 
+
+.portfolio {
+    padding: 40px;
+    h2 {
+	color: $orange;
+	text-align: center;
+    }
+    
+    .project {
+	/* In _general.scss there's an image wrapper making it square */
+	float: left;
+	width: calc(33.33% - 20px);
+	@media(max-width: 960px) {
+	    width: 100%;
+	    margin: 20px 0;
+	}
+	position: relative;
+	margin: 10px;
+
+	
+	.overlay {
+	    /* display:none; */
+	    /* Using opacity/visibility instead of display */
+	    /* because you can animate those */
+	    opacity: 0;
+	    visibility: hidden;	    
+	    transition: opacity 200ms, visibility 200ms;
+	    cursor: default;
+
+	    background: rgba(0,0,0,0.8);
+	    top:0;
+	    bottom:0;
+	    width: 100%;		
+	    position: absolute;
+	    text-align:center;
+	    padding: 20px;
+	    h2, p, a {
+		color: white;
+	    }
+	    .btn-outline {
+		position: absolute;
+		bottom: 20px;
+		left: calc(50% - 90px);
+		width: 180px;		
+	    }
+	}
+	/* Display overlay on hover */
+	&:hover .overlay {
+	    /* display:block; */
+	    visibility: visible;
+	    opacity: 1;	    
+	}
+	/* Scale up on hover */
+	&:hover {
+	    transform: scale(1.05);
+	    transition: all 200ms;
+	}
+
+	
+    }
+}
+
+/* Social proof */
+.social-proof {
+    background-color: #1e2329;
+    background-color: #1c2027;    
+    
+    img {
+	width: calc(100% - 80px);
+	opacity: 0.2;
+	margin: 0 40px;
+    }
+}
+
+
 .macbook-bg {
-    /* background: white url("/static/img/macbook.png") no-repeat center; */
-    background: white url("/static/img/dots-bg-min.jpg") no-repeat center;    
+    background: white url("/static/img/macbook.png") no-repeat center;
+    /* background: white url("/static/img/dots-bg-min.jpg") no-repeat center;     */
     background-size: cover;
 
 }
 /* Testimonials */
-.testimonials {
+.testimonials {    
     text-align: center;
     padding: 40px;
     background: rgba(0,0,0,0.2);
     background: rgba(0,0,0,0.8);
+    h2 {
+	color: white;
+    }
     img {
 	margin-bottom: 20px;
     }
     hr {
 	width: 40px;
 	margin: 10px auto;
+	border-bottom: 1px solid rgba(255,255,255,0.8);
     }
     p {
 	color:white;
@@ -237,8 +316,8 @@
 }
 
 .contact {
-    padding: 40px;
-    padding-bottom: 20px;    
+    padding: 20px;
+    padding-bottom: 0px;    
     background: rgba(0,0,0,0.8);
     background: rgb(39, 46, 51);
 
@@ -248,15 +327,14 @@
 
     }
     textarea {
-	min-height: calc(100vh - 300px);
-	@media(max-width: 960px) {
-	    min-height: 300px;
-	}
+	min-height: 120px;
+	height: 120px;	
     }
     .form-control {
 	border: none;
 	background: rgb(30, 35, 41);
 	color: white;
+	border-bottom: 1px solid #272e33;
     }
 }
 
@@ -265,6 +343,7 @@
 footer {
     background-color: #333a42;
     background-color: #1e2329;	/* darker form */
+    background-color: #1c2027!important;    
     color: #babfc2;
     min-height:20px;    
 }

@@ -83,7 +83,15 @@ a {
 .btn-large {
     padding: 20px 40px;
 }
-
+.btn-outline {
+    border: 1px solid white;
+    padding: 20px 40px;
+    color: white;
+    background: none;
+    display: inline-block;
+    cursor: pointer;
+	
+}
 /* Customize bootstrap */
 
 .container {
@@ -261,3 +269,57 @@ textarea, textarea:focus, textarea:active {
     box-shadow: none!important;    
 }
 
+
+
+/* Css magic that keeps images square, background in the center. */
+.image-wrapper-square {
+    width: 100%;
+    position: relative;
+
+    &:after {
+	padding-top: 100%;
+	display: block;
+	content: '';
+    }	
+    
+    .thumbnail {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;	    
+	background-position: 50% 50%;
+	background-size: cover;
+
+	margin: 0;
+	border: none;
+	background-color: #1f364d;
+    }    
+}
+
+
+/* Css magic that keeps images 16x9, background in the center. */
+.image-wrapper {
+    width: 100%;
+    position: relative;
+
+    &:after {
+	padding-top: 56.25%; /* 16:9 ratio */
+	display: block;
+	content: '';
+    }	
+    
+    .thumbnail {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;	    
+	background-position: 50% 50%;
+	background-size: cover;
+
+	margin: 0;
+	border: none;
+	background-color: #1f364d;
+    }    
+}
