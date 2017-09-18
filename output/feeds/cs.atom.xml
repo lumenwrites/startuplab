@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Startup Lab - CS</title><link href="/" rel="alternate"></link><link href="/feeds/cs.atom.xml" rel="self"></link><id>/</id><updated>2017-09-17T00:00:00-07:00</updated><entry><title>What is Recursion?</title><link href="/post/recursion" rel="alternate"></link><published>2017-09-17T00:00:00-07:00</published><updated>2017-09-17T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-09-17:/post/recursion</id><summary type="html">&lt;p&gt;&lt;img alt="" src="https://cdn-images-1.medium.com/max/1520/1*NXs4iBMjyXG-4Zekq-wKHQ.png"&gt;&lt;/p&gt;
+&lt;h2&gt;What is Recursion?&lt;/h2&gt;
+&lt;p&gt;Recursion simply means “self reference”. When something refers to itself or describes itself, it is called recursive.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;&lt;img alt="" src="https://cdn-images-1.medium.com/max/1520/1*NXs4iBMjyXG-4Zekq-wKHQ.png"&gt;&lt;/p&gt;
+&lt;h2&gt;What is Recursion?&lt;/h2&gt;
+&lt;p&gt;Recursion simply means “self reference”. When something refers to itself or describes itself, it is called recursive.&lt;/p&gt;
+
+
+&lt;p&gt;For example
+&amp;gt; “This sentence is recursive.”&lt;/p&gt;
+&lt;p&gt;is recursive.&lt;/p&gt;
+&lt;p&gt;This picture is also recursive:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cdn-images-1.medium.com/max/1520/1*bMBCjV1dBypkbHOwSZMtpA.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;In programming, recursive function is a function that calls itself&lt;/p&gt;
+&lt;p&gt;Let’s say you and your friends have ordered pizza, and now you want to cut it into equal slices. To do that you cut it in half, then you cut the resulting slices in half, and keep going until there’s enough slices for everyone.&lt;/p&gt;
+&lt;p&gt;In code, it would look like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def slice_pizza(number_of_friends, number_of_slices):
+    # Cut pizza in half
+    number_of_slices = number_of_slices*2
+
+    # Is there enough slices for everybody?
+    if number_of_slices &amp;amp;gt;= number_of_friends:
+        # If yes - return our slices, it&amp;#39;s time to eat pizza!
+        return number_of_slices
+    else:
+        # If not - then cut it in half once again.
+        return slice_pizza(number_of_friends, number_of_slices)
+
+
+print(slice_pizza(15, 1))
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This function takes the number of friends in the room(15), and a number of slices of pizza(initially 1). It cuts pizza in half:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;number_of_slices = number_of_slices*2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and checks if there’s enough of the slices now. If yes — it just returns the number of resulting slices, if not — it calls itself again, to cut the pizza in half one more time.&lt;/p&gt;
+&lt;p&gt;Recursive functions can be hard to think about, but there’s a whole class of problems in Computer Science that are much easier solved by using this kind of algorithms. For example it can be used for binary search, for finding a factorial of a number, or for creating a system of nested comments like on reddit.&lt;/p&gt;</content></entry></feed>

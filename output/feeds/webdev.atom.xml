@@ -1,5 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Startup Lab - webdev</title><link href="/" rel="alternate"></link><link href="/feeds/webdev.atom.xml" rel="self"></link><id>/</id><updated>2017-08-18T00:00:00-07:00</updated><entry><title>Full-Stack Web Development - the Complete Roadmap</title><link href="/post/fullstack-web-development-roadmap" rel="alternate"></link><published>2017-08-18T00:00:00-07:00</published><updated>2017-08-18T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-08-18:/post/fullstack-web-development-roadmap</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/webdev-roadmap-1.jpeg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Startup Lab - webdev</title><link href="/" rel="alternate"></link><link href="/feeds/webdev.atom.xml" rel="self"></link><id>/</id><updated>2017-09-17T00:00:00-07:00</updated><entry><title>Deploying Mastodon on Digital Ocean</title><link href="/post/deploying-mastodon-on-digital-ocean" rel="alternate"></link><published>2017-09-17T00:00:00-07:00</published><updated>2017-09-17T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-09-17:/post/deploying-mastodon-on-digital-ocean</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/deploying-mastodon/mastodon.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tootsuite/mastodon"&gt;Mastodon&lt;/a&gt; is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on &lt;a href="http://digitalocean.com"&gt;Digital Ocean&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Set up a Droplet&lt;/h2&gt;
+&lt;p&gt;Create a new docker droplet:
+&lt;img alt="" src="https://raw.githubusercontent.com/raymestalez/django-react-blog/master/assets/docker-droplet.png"&gt;&lt;/p&gt;
+&lt;p&gt;This droplet has almost everything we will need preinstalled.&lt;/p&gt;
+&lt;p&gt;You will receive an email from DO with the credentials you can use to log in to start setting up the server.&lt;/p&gt;
+&lt;p&gt;Connect to the server as a root user, using ip and password from the email:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh root@[ip-from-email]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You will be prompted to change the default password, so do that.&lt;/p&gt;
+&lt;p&gt;Then create a new user with the username you like, and grant him the sudo powers:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;adduser ray
+gpasswd -a ray sudo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Connect domain name&lt;/h2&gt;
+&lt;p&gt;Let's also immediately point your domain name to the droplet …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="" src="/images/deploying-mastodon/mastodon.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tootsuite/mastodon"&gt;Mastodon&lt;/a&gt; is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on &lt;a href="http://digitalocean.com"&gt;Digital Ocean&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Set up a Droplet&lt;/h2&gt;
+&lt;p&gt;Create a new docker droplet:
+&lt;img alt="" src="https://raw.githubusercontent.com/raymestalez/django-react-blog/master/assets/docker-droplet.png"&gt;&lt;/p&gt;
+&lt;p&gt;This droplet has almost everything we will need preinstalled.&lt;/p&gt;
+&lt;p&gt;You will receive an email from DO with the credentials you can use to log in to start setting up the server.&lt;/p&gt;
+&lt;p&gt;Connect to the server as a root user, using ip and password from the email:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh root@[ip-from-email]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You will be prompted to change the default password, so do that.&lt;/p&gt;
+&lt;p&gt;Then create a new user with the username you like, and grant him the sudo powers:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;adduser ray
+gpasswd -a ray sudo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Connect domain name&lt;/h2&gt;
+&lt;p&gt;Let's also immediately point your domain name to the droplet. After buying the domain(I recommend using &lt;a href="http://namecheap.com"&gt;namecheap&lt;/a&gt;), change the Custom DNS settings to look like this:
+&lt;img alt="" src="http://i.imgur.com/FxKpsob.png"&gt;&lt;/p&gt;
+&lt;p&gt;Then, in DO's networking tab, create a domain, and add an A record pointing to the droplet:
+&lt;img alt="" src="http://i.imgur.com/AJppAHP.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now you will be able to ssh into your server using your new username and a domain name:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh ray@hackertribe.io
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Install and configure basic stuff&lt;/h2&gt;
+&lt;p&gt;Update and upgrade all the software:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get update &amp;amp;amp;&amp;amp;amp; sudo apt-get upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install nginx(we'll use it to serve our droplet on the right port), and your favorite text editor:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install nginx emacs
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now let's add docker to the sudo group, that will allow us to run all the docker commands without sudo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo usermod -aG docker $USER
+sudo service docker restart
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Clone and configure Mastodon&lt;/h2&gt;
+&lt;p&gt;Clone the repo and cd into it:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/tootsuite/mastodon.git
+cd mastodon
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now let's configure some settings.  First, rename the file &lt;code&gt;.env.production.sample&lt;/code&gt; into &lt;code&gt;.env.production&lt;/code&gt; and open it.&lt;/p&gt;
+&lt;p&gt;Set the database username/password settings:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;DB_USER=your_username
+DB_NAME=your_databasename
+DB_PASS=your_password
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Set your domain name:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;LOCAL_DOMAIN=hackertribe.io
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And enable https:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;LOCAL_HTTPS=true
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Run &lt;code&gt;docker-compose run --rm web rake secret&lt;/code&gt; to generate PAPERCLIP_SECRET, SECRET_KEY_BASE, and OTP_SECRET.&lt;/p&gt;
+&lt;h3&gt;Configure the email server&lt;/h3&gt;
+&lt;p&gt;Create a &lt;a href="https://sendgrid.com/"&gt;SendGrid&lt;/a&gt; account, go to Settings &amp;gt; API Keys, and generate an API key.&lt;/p&gt;
+&lt;p&gt;Then set up the config like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SMTP_SERVER=smtp.sendgrid.net
+SMTP_PORT=587
+SMTP_LOGIN=apikey
+SMTP_PASSWORD=
+SMTP_FROM_ADDRESS=youremail@gmail.com
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(for SMTP_LOGIN literally just use &amp;quot;apikey&amp;quot;)&lt;/p&gt;
+&lt;h3&gt;Configure the site info&lt;/h3&gt;
+&lt;p&gt;Open the file &lt;code&gt;/mastodon/config/settings.yml&lt;/code&gt;, and enter the information about your instance(title, description, etc).&lt;/p&gt;
+&lt;h2&gt;Build the containers&lt;/h2&gt;
+&lt;p&gt;Before we can build the containers, we need to add a swap file, without it my $10/month droplet was running out of memory during the build process. To add swap, execute these commands:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo fallocate -l 1G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(you can read more in depth about it &lt;a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04"&gt;here&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Now let's finally build our containers! (It will take a few minutes)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker-compose build
+docker-compose up -d
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(the -d flag means that we want to run it in the background mode. You can try running it without this flag, and you will see the log of everything that's going on on the screen)&lt;/p&gt;
+&lt;h2&gt;Create the DB and migrate&lt;/h2&gt;
+&lt;p&gt;Now we need to run several commands in the db container to create the database.&lt;/p&gt;
+&lt;p&gt;SSH into the container:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker exec -i -t mastodon_db_1  /bin/bash
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Switch to the postgres user:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;su - postgres
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Create a user for your db(use the username and password you've just set in the .env.production)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;createuser -P your_username
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Create a database, giving the ownership rights to the user:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;createdb your_databasename -O your_username
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you can get back to your own user, and run the migrations:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker-compose run --rm web rails db:migrate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Precompile assets&lt;/h2&gt;
+&lt;p&gt;Now you can precompile the assets:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker-compose run --rm web rails assets:precompile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After this has finished, restart the containers:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker stop $(docker ps -a -q) &amp;amp;amp;&amp;amp;amp; docker-compose up -d
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And now your mastodon instance will run on yourdomain.com:3000!!&lt;/p&gt;
+&lt;h2&gt;Setting up nginx and SSL&lt;/h2&gt;
+&lt;p&gt;First, follow &lt;a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04"&gt;this guide&lt;/a&gt; to generate SSL keys and set up the basic nginx configuration.&lt;/p&gt;
+&lt;p&gt;Then, because the docker containers are serving the application on the port 3000, we will need to use nginx to proxy all the requests to them. &lt;/p&gt;
+&lt;p&gt;Create the file &lt;code&gt;/etc/nginx/sites-enabled/mastodon_nginx.conf&lt;/code&gt;, and copy the settings from &lt;a href="https://github.com/tootsuite/mastodon/blob/master/docs/Running-Mastodon/Production-guide.md"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now, after you restart nginx:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo /etc/init.d/nginx restart
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It will serve your Mastodon instance! &lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Congratulations =) Create an account, test things, and invite some people to use your instance!&lt;/p&gt;
+&lt;p&gt;I also recommend submitting a link to your instance to &lt;a href="https://instances.mastodon.xyz"&gt;this list&lt;/a&gt; to make it easier for people to discover it.&lt;/p&gt;
+&lt;p&gt;If you're looking for some help with deployment - send an email to &lt;strong&gt;contact@startuplab.io&lt;/strong&gt;, and I will setup mastodon for you($100).&lt;/p&gt;
+&lt;p&gt;Also, always feel free to toot at me at &lt;a href="https://mastodon.social/@startuplab"&gt;@startuplab@mastodon.social&lt;/a&gt;, I will be happy to answer your questions =)&lt;/p&gt;</content><category term="Webdev"></category><category term="Devops"></category><category term="Mastodon"></category></entry><entry><title>Setting up SSL with nginx on Ubuntu server</title><link href="/post/setting-up-ssl" rel="alternate"></link><published>2017-09-17T00:00:00-07:00</published><updated>2017-09-17T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-09-17:/post/setting-up-ssl</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/ssl2.png"&gt;&lt;/p&gt;
+&lt;p&gt;For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;&lt;img alt="" src="/images/ssl2.png"&gt;&lt;/p&gt;
+&lt;p&gt;For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.&lt;/p&gt;
+
+
+&lt;h2&gt;Generate certificates&lt;/h2&gt;
+&lt;p&gt;First, make sure that your nginx config can serve files from &lt;code&gt;/var/www/html&lt;/code&gt; - it should work by default.&lt;/p&gt;
+&lt;p&gt;Then install certbot - it is a script that will place some files into your &lt;code&gt;/var/www/html&lt;/code&gt;, and then use them to verify that you have the ssh access to the server, which proves that you are the domain owner.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install certbot   
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you can use this script to generate your certificates:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo certbot certonly --webroot -w /var/www/html -d yourdomain.com
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will create a file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/etc/letsencrypt/live/yourdomain.com/fullchain.pem
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is a file that you're going to use to prove people that you're all good and not an evil hacker.&lt;/p&gt;
+&lt;p&gt;You also want to run a script that generates something called &amp;quot;Diffie-Hellman Group&amp;quot; - some sort of fancy security thingy that makes your SSL more secure.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will create a file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/etc/ssl/certs/dhparam.pem
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;which you will serve along with SSL certificate.&lt;/p&gt;
+&lt;h2&gt;Create configuration snippets&lt;/h2&gt;
+&lt;p&gt;Now you want to create two nginx configuration snippets - bits of config that will properly configure nginx and tell it where to find your certificates.&lt;/p&gt;
+&lt;p&gt;First create a file &lt;code&gt;/etc/nginx/snippets/ssl-yourdomain.com.conf&lt;/code&gt;, with this content:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It will tell nginx where your certificates are.&lt;/p&gt;
+&lt;p&gt;Then create a second file &lt;code&gt;/etc/nginx/snippets/ssl-params.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;from&lt;/span&gt; &lt;span class="nt"&gt;https&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;cipherli&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;st&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="nt"&gt;https&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;raymii&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;s&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;tutorials&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;Strong_SSL_Security_On_nginx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;html&lt;/span&gt;
+
+&lt;span class="nt"&gt;ssl_protocols&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;2&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_ciphers&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;quot&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;EECDH&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nt"&gt;AESGCM&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;EDH&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nt"&gt;AESGCM&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;AES256&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nt"&gt;EECDH&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;AES256&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nt"&gt;EDH&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;quot&lt;/span&gt;&lt;span class="o"&gt;;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_ecdh_curve&lt;/span&gt; &lt;span class="nt"&gt;secp384r1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_session_cache&lt;/span&gt; &lt;span class="nt"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;SSL&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;10m&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_session_tickets&lt;/span&gt; &lt;span class="nt"&gt;off&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_stapling&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_stapling_verify&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;resolver&lt;/span&gt; &lt;span class="nt"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;8&lt;/span&gt; &lt;span class="nt"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;4&lt;/span&gt; &lt;span class="nt"&gt;valid&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nt"&gt;300s&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;resolver_timeout&lt;/span&gt; &lt;span class="nt"&gt;5s&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Disable&lt;/span&gt; &lt;span class="nt"&gt;preloading&lt;/span&gt; &lt;span class="nt"&gt;HSTS&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;now&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="nt"&gt;You&lt;/span&gt; &lt;span class="nt"&gt;can&lt;/span&gt; &lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;commented&lt;/span&gt; &lt;span class="nt"&gt;out&lt;/span&gt; &lt;span class="nt"&gt;header&lt;/span&gt; &lt;span class="nt"&gt;line&lt;/span&gt; &lt;span class="nt"&gt;that&lt;/span&gt; &lt;span class="nt"&gt;includes&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;quot&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;preload&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;quot&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="nt"&gt;directive&lt;/span&gt; &lt;span class="nt"&gt;if&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;understand&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;implications&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="p"&gt;#&lt;/span&gt;&lt;span class="nn"&gt;add_header&lt;/span&gt; &lt;span class="nt"&gt;Strict-Transport-Security&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;quot&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;max-age&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nt"&gt;63072000&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="nt"&gt;includeSubdomains&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="nt"&gt;preload&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;quot&lt;/span&gt;&lt;span class="o"&gt;;;&lt;/span&gt;
+&lt;span class="nt"&gt;add_header&lt;/span&gt; &lt;span class="nt"&gt;Strict-Transport-Security&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;quot&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;max-age&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nt"&gt;63072000&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="nt"&gt;includeSubdomains&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;quot&lt;/span&gt;&lt;span class="o"&gt;;;&lt;/span&gt;
+&lt;span class="nt"&gt;add_header&lt;/span&gt; &lt;span class="nt"&gt;X-Frame-Options&lt;/span&gt; &lt;span class="nt"&gt;DENY&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;add_header&lt;/span&gt; &lt;span class="nt"&gt;X-Content-Type-Options&lt;/span&gt; &lt;span class="nt"&gt;nosniff&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="nt"&gt;ssl_dhparam&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;certs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;dhparam&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;pem&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It will properly configure SSL.&lt;/p&gt;
+&lt;h2&gt;Configure yoursite_nginx.conf&lt;/h2&gt;
+&lt;p&gt;Now you want nginx to take all the requests coming to your website, and redirect them to https with properly configured SSL.&lt;/p&gt;
+&lt;p&gt;Just create or modify the file &lt;code&gt;/etc/nginx/sites-enabled/yoursite_nginx.conf&lt;/code&gt; to look like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+       &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;redirect&lt;/span&gt; &lt;span class="err"&gt;from&lt;/span&gt; &lt;span class="err"&gt;http&lt;/span&gt; &lt;span class="err"&gt;to&lt;/span&gt; &lt;span class="err"&gt;https&lt;/span&gt;                              
+        &lt;span class="err"&gt;listen&lt;/span&gt; &lt;span class="err"&gt;80&lt;/span&gt; &lt;span class="err"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="err"&gt;server_name&lt;/span&gt; &lt;span class="err"&gt;yourdomain.com&lt;/span&gt; &lt;span class="err"&gt;www.yourdomain.com&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="err"&gt;return&lt;/span&gt; &lt;span class="err"&gt;301&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;server_name&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;request_uri&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="err"&gt;listen&lt;/span&gt; &lt;span class="err"&gt;80&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;server_name&lt;/span&gt; &lt;span class="err"&gt;yourdomain.com&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;load&lt;/span&gt; &lt;span class="err"&gt;ssl&lt;/span&gt; &lt;span class="err"&gt;config&lt;/span&gt;                                             
+    &lt;span class="err"&gt;listen&lt;/span&gt; &lt;span class="err"&gt;443&lt;/span&gt; &lt;span class="err"&gt;ssl&lt;/span&gt; &lt;span class="err"&gt;http2&lt;/span&gt; &lt;span class="err"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt; &lt;span class="n"&gt;http2&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;include&lt;/span&gt; &lt;span class="err"&gt;snippets/ssl-yourdomain.com.conf&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;include&lt;/span&gt; &lt;span class="err"&gt;snippets/ssl-params.conf&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="err"&gt;.....&lt;/span&gt; &lt;span class="err"&gt;here&lt;/span&gt; &lt;span class="err"&gt;goes&lt;/span&gt; &lt;span class="err"&gt;all&lt;/span&gt; &lt;span class="err"&gt;the&lt;/span&gt; &lt;span class="err"&gt;rest&lt;/span&gt; &lt;span class="err"&gt;of&lt;/span&gt; &lt;span class="err"&gt;your&lt;/span&gt; &lt;span class="err"&gt;config.&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;       
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The first block of code will redirect all the http traffic to https, and the second will load the snippets you've created to configure ssl and serve the certificates.&lt;/p&gt;
+&lt;p&gt;Now all you need to do is restart nginx:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo /etc/init.d/nginx restart
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and your site will be served over https! &lt;/p&gt;
+&lt;p&gt;Awesome.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/PouzC1D.png"&gt;&lt;/p&gt;</content><category term="Webdev"></category><category term="Devops"></category><category term="Mastodon"></category></entry><entry><title>Full-Stack Web Development - the Complete Roadmap</title><link href="/post/fullstack-web-development-roadmap" rel="alternate"></link><published>2017-08-18T00:00:00-07:00</published><updated>2017-08-18T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-08-18:/post/fullstack-web-development-roadmap</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/webdev-roadmap-1.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;Learning web development is a huge advantage for a founder, even understanding
 the basics will be extremely useful. This post will give you a high-level
 overview of everything you need to learn, a roadmap for getting started, and a

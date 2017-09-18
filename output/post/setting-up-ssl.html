@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/styles/css/vendor.css">    
+    <link rel="stylesheet" href="/static/styles/css/style.css">
+
+    <!-- Meta -->
+    <meta name="author" content="Ray Alez">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="https://startuplab.io/static/img/favicon.png"/>	
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:creator" content="@raymestalez" />
+    <meta property="twitter:site" content="@StartupLabIO" />  
+    <!-- <meta property="og:url" content="https://startuplab.io"> -->
+<title>Setting up SSL with nginx on Ubuntu server - Startup Lab</title>
+<meta property="twitter:title" content="Setting up SSL with nginx on Ubuntu server - Startup Lab" />
+<!-- Meta -->
+<meta name="keywords"
+      content="Web, Development, Consulting, Programming, Marketing, Startup, React, Redux, Django, Portfolio, [<Tag 'Webdev'>, <Tag 'Devops'>, <Tag 'Mastodon'>].">
+<!-- Description -->
+<meta name="description"
+      content="For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.">
+<meta property="og:description"
+      content="For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.">
+<meta property="twitter:description"
+      content="For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.">
+<!-- Social Image -->
+<meta property="og:image"
+      content="https://startuplab.io/images//images/ssl2.png" />    
+<meta property="twitter:image"
+      content="https://startuplab.io/images//images/ssl2.png" />    
+    
+
+<!-- Feeds -->
+<link href="/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="Startup Lab Full Atom Feed" />
+
+
+    <!-- Feeds -->
+    <link href="/" type="application/atom+xml" rel="alternate" title="Startup Lab Webdev Atom Feed" />
+ 
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">      
+	<div class="col-xs-12 col-sm-6">
+	  <!-- Logo -->
+	  <div class="logo">
+	    <a href="https://startuplab.io">
+	      <img src="/static/img/logo.png"/>
+	      <span class="title">startup<b>lab</b></span>
+	    </a>
+	  </div> <!-- End .logo -->
+	</div>
+	<!-- Menu -->
+	<div class="col-xs-12 col-sm-6">
+	  <div class="main-menu">
+
+	    
+	    <a data-toggle="modal" data-target="#subscribe"
+	       class="btn btn-default" id="subscribe-link">
+	      Subscribe
+	    </a>
+	    <!-- 
+	    <a href="/academy"
+	       class="btn btn-default" id="subscribe-link">
+	      Academy
+	    </a>
+	    -->
+	    <!-- Blog menu with categories dropdown -->
+	    <div class="dropdown">
+	      <a class="btn btn-default" href="/blog" id="blog-link">
+		Blog
+	      </a>
+	      <ul class="dropdown-menu" role="menu">
+		<li>
+		  <a href="/advice">advice</a>
+		</li>
+		<li>
+		  <a href="/cs">CS</a>
+		</li>
+		<li>
+		  <a href="/drafts">drafts</a>
+		</li>
+		<li>
+		  <a href="/marketing">marketing</a>
+		</li>
+		<li>
+		  <a href="/mastery">mastery</a>
+		</li>
+		<li>
+		  <a href="/rationality">rationality</a>
+		</li>
+		<li>
+		  <a href="/startup">startup</a>
+		</li>
+		<li class="active">
+		  <a href="/webdev">webdev</a>
+		</li>
+	      </ul>
+	    </div> <!-- End .dropdown -->
+	    <!-- 
+	    <a class="btn btn-default"  href="">
+	      <i class="fa fa-reddit-square"></i>
+	    </a>
+	    <a class="btn btn-default" href="">
+	      <i class="fa fa-youtube-square"></i>
+	    </a>
+	     -->
+	    
+	    <!-- Other menus from pelicanconf -->
+	    <a class="btn btn-default" href="/services" id="services-link">
+	      Services
+	    </a>
+
+
+	  </div>
+	</div><!-- End .col-xs-12 -->
+      </div>   <!-- End .row .cta -->
+    </div>   <!-- End .container -->
+</div>   <!-- End .main-menu -->
+</header>
+
+<div class="page">
+<div class="container post-detail">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 post-detail">
+      <article class="post">
+	<a href="/post/setting-up-ssl"><h1>Setting up SSL with nginx on Ubuntu server</h1></a>
+	<p><img alt="" src="/images/ssl2.png"></p>
+<p>For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.</p>
+
+
+<h2>Generate certificates</h2>
+<p>First, make sure that your nginx config can serve files from <code>/var/www/html</code> - it should work by default.</p>
+<p>Then install certbot - it is a script that will place some files into your <code>/var/www/html</code>, and then use them to verify that you have the ssh access to the server, which proves that you are the domain owner.</p>
+<div class="highlight"><pre><span></span>sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install certbot   
+</pre></div>
+
+
+<p>Now you can use this script to generate your certificates:</p>
+<div class="highlight"><pre><span></span>sudo certbot certonly --webroot -w /var/www/html -d yourdomain.com
+</pre></div>
+
+
+<p>This will create a file:</p>
+<div class="highlight"><pre><span></span>/etc/letsencrypt/live/yourdomain.com/fullchain.pem
+</pre></div>
+
+
+<p>This is a file that you're going to use to prove people that you're all good and not an evil hacker.</p>
+<p>You also want to run a script that generates something called &quot;Diffie-Hellman Group&quot; - some sort of fancy security thingy that makes your SSL more secure.</p>
+<div class="highlight"><pre><span></span>sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+</pre></div>
+
+
+<p>This will create a file:</p>
+<div class="highlight"><pre><span></span>/etc/ssl/certs/dhparam.pem
+</pre></div>
+
+
+<p>which you will serve along with SSL certificate.</p>
+<h2>Create configuration snippets</h2>
+<p>Now you want to create two nginx configuration snippets - bits of config that will properly configure nginx and tell it where to find your certificates.</p>
+<p>First create a file <code>/etc/nginx/snippets/ssl-yourdomain.com.conf</code>, with this content:</p>
+<div class="highlight"><pre><span></span>ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+</pre></div>
+
+
+<p>It will tell nginx where your certificates are.</p>
+<p>Then create a second file <code>/etc/nginx/snippets/ssl-params.conf</code>:</p>
+<div class="highlight"><pre><span></span><span class="err">#</span> <span class="nt">from</span> <span class="nt">https</span><span class="o">://</span><span class="nt">cipherli</span><span class="p">.</span><span class="nc">st</span><span class="o">/</span>
+<span class="err">#</span> <span class="nt">and</span> <span class="nt">https</span><span class="o">://</span><span class="nt">raymii</span><span class="p">.</span><span class="nc">org</span><span class="o">/</span><span class="nt">s</span><span class="o">/</span><span class="nt">tutorials</span><span class="o">/</span><span class="nt">Strong_SSL_Security_On_nginx</span><span class="p">.</span><span class="nc">html</span>
+
+<span class="nt">ssl_protocols</span> <span class="nt">TLSv1</span> <span class="nt">TLSv1</span><span class="p">.</span><span class="nc">1</span> <span class="nt">TLSv1</span><span class="p">.</span><span class="nc">2</span><span class="o">;</span>
+<span class="nt">ssl_prefer_server_ciphers</span> <span class="nt">on</span><span class="o">;</span>
+<span class="nt">ssl_ciphers</span> <span class="o">&amp;</span><span class="nt">quot</span><span class="o">;</span><span class="nt">EECDH</span><span class="o">+</span><span class="nt">AESGCM</span><span class="p">:</span><span class="nd">EDH</span><span class="o">+</span><span class="nt">AESGCM</span><span class="p">:</span><span class="nd">AES256</span><span class="o">+</span><span class="nt">EECDH</span><span class="p">:</span><span class="nd">AES256</span><span class="o">+</span><span class="nt">EDH</span><span class="o">&amp;</span><span class="nt">quot</span><span class="o">;;</span>
+<span class="nt">ssl_ecdh_curve</span> <span class="nt">secp384r1</span><span class="o">;</span>
+<span class="nt">ssl_session_cache</span> <span class="nt">shared</span><span class="p">:</span><span class="nd">SSL</span><span class="p">:</span><span class="nd">10m</span><span class="o">;</span>
+<span class="nt">ssl_session_tickets</span> <span class="nt">off</span><span class="o">;</span>
+<span class="nt">ssl_stapling</span> <span class="nt">on</span><span class="o">;</span>
+<span class="nt">ssl_stapling_verify</span> <span class="nt">on</span><span class="o">;</span>
+<span class="nt">resolver</span> <span class="nt">8</span><span class="p">.</span><span class="nc">8</span><span class="p">.</span><span class="nc">8</span><span class="p">.</span><span class="nc">8</span> <span class="nt">8</span><span class="p">.</span><span class="nc">8</span><span class="p">.</span><span class="nc">4</span><span class="p">.</span><span class="nc">4</span> <span class="nt">valid</span><span class="o">=</span><span class="nt">300s</span><span class="o">;</span>
+<span class="nt">resolver_timeout</span> <span class="nt">5s</span><span class="o">;</span>
+<span class="err">#</span> <span class="nt">Disable</span> <span class="nt">preloading</span> <span class="nt">HSTS</span> <span class="nt">for</span> <span class="nt">now</span><span class="o">.</span>  <span class="nt">You</span> <span class="nt">can</span> <span class="nt">use</span> <span class="nt">the</span> <span class="nt">commented</span> <span class="nt">out</span> <span class="nt">header</span> <span class="nt">line</span> <span class="nt">that</span> <span class="nt">includes</span>
+<span class="err">#</span> <span class="nt">the</span> <span class="o">&amp;</span><span class="nt">quot</span><span class="o">;</span><span class="nt">preload</span><span class="o">&amp;</span><span class="nt">quot</span><span class="o">;</span> <span class="nt">directive</span> <span class="nt">if</span> <span class="nt">you</span> <span class="nt">understand</span> <span class="nt">the</span> <span class="nt">implications</span><span class="o">.</span>
+<span class="p">#</span><span class="nn">add_header</span> <span class="nt">Strict-Transport-Security</span> <span class="o">&amp;</span><span class="nt">quot</span><span class="o">;</span><span class="nt">max-age</span><span class="o">=</span><span class="nt">63072000</span><span class="o">;</span> <span class="nt">includeSubdomains</span><span class="o">;</span> <span class="nt">preload</span><span class="o">&amp;</span><span class="nt">quot</span><span class="o">;;</span>
+<span class="nt">add_header</span> <span class="nt">Strict-Transport-Security</span> <span class="o">&amp;</span><span class="nt">quot</span><span class="o">;</span><span class="nt">max-age</span><span class="o">=</span><span class="nt">63072000</span><span class="o">;</span> <span class="nt">includeSubdomains</span><span class="o">&amp;</span><span class="nt">quot</span><span class="o">;;</span>
+<span class="nt">add_header</span> <span class="nt">X-Frame-Options</span> <span class="nt">DENY</span><span class="o">;</span>
+<span class="nt">add_header</span> <span class="nt">X-Content-Type-Options</span> <span class="nt">nosniff</span><span class="o">;</span>
+
+<span class="nt">ssl_dhparam</span> <span class="o">/</span><span class="nt">etc</span><span class="o">/</span><span class="nt">ssl</span><span class="o">/</span><span class="nt">certs</span><span class="o">/</span><span class="nt">dhparam</span><span class="p">.</span><span class="nc">pem</span><span class="o">;</span>
+</pre></div>
+
+
+<p>It will properly configure SSL.</p>
+<h2>Configure yoursite_nginx.conf</h2>
+<p>Now you want nginx to take all the requests coming to your website, and redirect them to https with properly configured SSL.</p>
+<p>Just create or modify the file <code>/etc/nginx/sites-enabled/yoursite_nginx.conf</code> to look like this:</p>
+<div class="highlight"><pre><span></span><span class="nt">server</span> <span class="p">{</span>
+       <span class="err">#</span> <span class="err">redirect</span> <span class="err">from</span> <span class="err">http</span> <span class="err">to</span> <span class="err">https</span>                              
+        <span class="err">listen</span> <span class="err">80</span> <span class="err">default_server</span><span class="p">;</span>
+        <span class="n">listen</span> <span class="cp">[</span><span class="p">::</span><span class="cp">]</span><span class="p">:</span><span class="mi">80</span> <span class="n">default_server</span><span class="p">;</span>
+        <span class="err">server_name</span> <span class="err">yourdomain.com</span> <span class="err">www.yourdomain.com</span><span class="p">;</span>
+        <span class="err">return</span> <span class="err">301</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="err">$</span><span class="n">server_name</span><span class="err">$</span><span class="n">request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">server</span> <span class="p">{</span>
+    <span class="err">listen</span> <span class="err">80</span><span class="p">;</span>
+    <span class="err">server_name</span> <span class="err">yourdomain.com</span><span class="p">;</span>
+
+    <span class="err">#</span> <span class="err">load</span> <span class="err">ssl</span> <span class="err">config</span>                                             
+    <span class="err">listen</span> <span class="err">443</span> <span class="err">ssl</span> <span class="err">http2</span> <span class="err">default_server</span><span class="p">;</span>
+    <span class="n">listen</span> <span class="cp">[</span><span class="p">::</span><span class="cp">]</span><span class="p">:</span><span class="mi">443</span> <span class="n">ssl</span> <span class="n">http2</span> <span class="n">default_server</span><span class="p">;</span>
+    <span class="err">include</span> <span class="err">snippets/ssl-yourdomain.com.conf</span><span class="p">;</span>
+    <span class="err">include</span> <span class="err">snippets/ssl-params.conf</span><span class="p">;</span>
+
+    <span class="err">.....</span> <span class="err">here</span> <span class="err">goes</span> <span class="err">all</span> <span class="err">the</span> <span class="err">rest</span> <span class="err">of</span> <span class="err">your</span> <span class="err">config.</span>
+<span class="p">}</span>       
+</pre></div>
+
+
+<p>The first block of code will redirect all the http traffic to https, and the second will load the snippets you've created to configure ssl and serve the certificates.</p>
+<p>Now all you need to do is restart nginx:</p>
+<div class="highlight"><pre><span></span>sudo /etc/init.d/nginx restart
+</pre></div>
+
+
+<p>and your site will be served over https! </p>
+<p>Awesome.</p>
+<p><img alt="" src="http://i.imgur.com/PouzC1D.png"></p>
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/webdev">webdev</a>
+    </span>
+	      
+    <span class="label label-default">
+      <a href="/tag/Webdev">Webdev</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Devops">Devops</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Mastodon">Mastodon</a>
+    </span>
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
+<div class="row subscription-box"  id="subscription-box">
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+	<div class="col-xs-12 col-md-6 cta-description">
+	  <div class="cta-text">
+	    Receive weekly digest of my best posts!
+	  </div>
+	</div> <!-- End col-xs-12 -->
+
+	<div class="col-xs-12 col-md-6">
+	  <form class="subscription-form"
+		action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=4d8030b35b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscription-form" target="_blank" novalidate>
+	    
+	    <input type="email" name="EMAIL"
+		   class="form-control" placeholder="email" />
+            <input name="SRC" type="hidden" id="email-src" />
+            <input name="OPTINLOC" type="hidden" value="subscription-box" />	    
+	    <input type="hidden"
+		   name="b_0f23c7984541d915d1108a16e_4d8030b35b"
+		   tabindex="-1" value="">	    
+	    <button class="btn btn-default" type="submit">
+	      Subscribe
+	    </button>
+	    <a class="btn btn-rss" href="/feeds/posts.atom.xml">
+	      <i class="fa fa-rss"></i>
+	    </a>
+	  </form>
+	</div> <!-- End .col-xs-12 -->
+      </div> <!-- End .col-md-12 col-sm-12 -->
+    </div> <!-- End .panel -->
+  </div> <!-- End .col-md-12 -->
+</div> <!-- End .subscription-box -->
+
+<div class="post-suggestions">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-4">
+      <a href="/free-guide">
+	<article class="post-box">
+	  <div class="thumbnail"
+	       style="background-image:
+		      url('/static/img/free-guide.png');"
+	       >
+	  </div>
+	  <div class="description">
+	    <h1>Free Guide</h1>
+	    <p>Download our free guide and learn how to come up with a profitable idea
+	    for your first online business.</p>
+	  </div>
+	</article>
+      </a>
+    </div>   <!-- End .col-xs-12 col-sm-4 -->
+    <!-- 
+    <div class="col-xs-12 col-sm-4">
+      <a href="/post/what-should-i-learn-as-a-founder">
+	<article class="post-box">
+	  <div class="thumbnail"
+	       style="background-image:
+		      url('/images/laptop-spaceship.jpg');"
+	       >
+	  </div>
+	  <div class="description">
+	    <h1>Founder Skills</h1>
+	    <p>What should I learn as an aspiring founder?</p>
+	  </div>
+	</article>
+      </a>
+    </div> -->   <!-- End .col-xs-12 col-sm-4 -->    
+
+    <div class="col-xs-12 col-sm-4">
+      <a href="https://www.reddit.com/r/IndieFounders">
+	<article class="post-box">
+	  <div class="thumbnail"
+	       style="background-image:
+		      url('/static/img/reddit-alien-blue.jpg');"
+	       >
+	  </div>
+	  <div class="description">
+	    <h1>Indie Founders</h1>
+	    <p>Join our community, ask questions, exchange advice and feedback.</p>
+	  </div>
+	</article>
+      </a>
+    </div>   <!-- End .col-xs-12 col-sm-4 -->
+
+    <div class="col-xs-12 col-sm-4">
+      <a href="/services">
+	<article class="post-box">
+	  <div class="thumbnail"
+	       style="background-image:
+		      url('/static/img/services-banner2.png');"
+	       >
+	  </div>
+	  <div class="description">
+	    <h1>Our Services</h1>
+	    <p>We help non-technical founders to create, launch, and grow their websites and applications.</p>
+	  </div>
+	</article>
+      </a>
+    </div>   <!-- End .col-xs-12 col-sm-4 -->
+    
+
+  </div> <!-- End .row .edit -->
+</div> <!-- End .story-suggestions -->      <br/>
+    </div> <!-- End col-md-12 -->
+  </div>   <!-- End .row -->
+</div>	   <!-- end .container -->
+</div>
+
+<footer>
+</footer>
+
+<div id="subscribe" class="modal fade" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+	  <form class="subscription-form"
+		action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=4d8030b35b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscription-form" target="_blank" novalidate>
+	    
+	    <input type="email" name="EMAIL"
+		   class="form-control" placeholder="email" />
+            <input name="SRC" type="hidden" id="email-src-modal" />
+            <input name="OPTINLOC" type="hidden" value="subscription-modal" />	    
+	    
+	    <input type="hidden"
+		   name="b_0f23c7984541d915d1108a16e_4d8030b35b"
+		   tabindex="-1" value="">	    
+	    <button class="btn btn-default" type="submit">
+	      Subscribe
+	    </button>
+	    <a class="btn btn-rss" href="/feeds/posts.atom.xml">
+	      <i class="fa fa-rss"></i>
+	    </a>
+	  </form>
+      </div>
+    </div>
+  </div>
+</div>	 <!-- End .modal -->
+
+
+
+<script src="/static/js/startuplab.min.js" async></script>
+
+</body>
+</html>

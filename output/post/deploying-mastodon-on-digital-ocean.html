@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/styles/css/vendor.css">    
+    <link rel="stylesheet" href="/static/styles/css/style.css">
+
+    <!-- Meta -->
+    <meta name="author" content="Ray Alez">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="https://startuplab.io/static/img/favicon.png"/>	
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:creator" content="@raymestalez" />
+    <meta property="twitter:site" content="@StartupLabIO" />  
+    <!-- <meta property="og:url" content="https://startuplab.io"> -->
+<title>Deploying Mastodon on Digital Ocean - Startup Lab</title>
+<meta property="twitter:title" content="Deploying Mastodon on Digital Ocean - Startup Lab" />
+<!-- Meta -->
+<meta name="keywords"
+      content="Web, Development, Consulting, Programming, Marketing, Startup, React, Redux, Django, Portfolio, [<Tag 'Webdev'>, <Tag 'Devops'>, <Tag 'Mastodon'>].">
+<!-- Description -->
+<meta name="description"
+      content="Mastodon is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on Digital Ocean. Set up a Droplet Create a new docker droplet: This droplet has almost everything we will need preinstalled. You will receive an email from DO with the credentials you can use to log in to start setting up the server. Connect to the server as a root user, using ip and password from the email: ssh root@[ip-from-email] You will be prompted to change the default password, so do that. Then create a new user with the username you like, and grant him the sudo powers: adduser ray gpasswd -a ray sudo Connect domain name Let's also immediately point your domain name to the droplet …">
+<meta property="og:description"
+      content="Mastodon is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on Digital Ocean. Set up a Droplet Create a new docker droplet: This droplet has almost everything we will need preinstalled. You will receive an email from DO with the credentials you can use to log in to start setting up the server. Connect to the server as a root user, using ip and password from the email: ssh root@[ip-from-email] You will be prompted to change the default password, so do that. Then create a new user with the username you like, and grant him the sudo powers: adduser ray gpasswd -a ray sudo Connect domain name Let's also immediately point your domain name to the droplet …">
+<meta property="twitter:description"
+      content="Mastodon is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on Digital Ocean. Set up a Droplet Create a new docker droplet: This droplet has almost everything we will need preinstalled. You will receive an email from DO with the credentials you can use to log in to start setting up the server. Connect to the server as a root user, using ip and password from the email: ssh root@[ip-from-email] You will be prompted to change the default password, so do that. Then create a new user with the username you like, and grant him the sudo powers: adduser ray gpasswd -a ray sudo Connect domain name Let's also immediately point your domain name to the droplet …">
+<!-- Social Image -->
+<meta property="og:image"
+      content="https://startuplab.io/images//images/deploying-mastodon/mastodon.png" />    
+<meta property="twitter:image"
+      content="https://startuplab.io/images//images/deploying-mastodon/mastodon.png" />    
+    
+
+<!-- Feeds -->
+<link href="/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="Startup Lab Full Atom Feed" />
+
+
+    <!-- Feeds -->
+    <link href="/" type="application/atom+xml" rel="alternate" title="Startup Lab Webdev Atom Feed" />
+ 
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">      
+	<div class="col-xs-12 col-sm-6">
+	  <!-- Logo -->
+	  <div class="logo">
+	    <a href="https://startuplab.io">
+	      <img src="/static/img/logo.png"/>
+	      <span class="title">startup<b>lab</b></span>
+	    </a>
+	  </div> <!-- End .logo -->
+	</div>
+	<!-- Menu -->
+	<div class="col-xs-12 col-sm-6">
+	  <div class="main-menu">
+
+	    
+	    <a data-toggle="modal" data-target="#subscribe"
+	       class="btn btn-default" id="subscribe-link">
+	      Subscribe
+	    </a>
+	    <!-- 
+	    <a href="/academy"
+	       class="btn btn-default" id="subscribe-link">
+	      Academy
+	    </a>
+	    -->
+	    <!-- Blog menu with categories dropdown -->
+	    <div class="dropdown">
+	      <a class="btn btn-default" href="/blog" id="blog-link">
+		Blog
+	      </a>
+	      <ul class="dropdown-menu" role="menu">
+		<li>
+		  <a href="/advice">advice</a>
+		</li>
+		<li>
+		  <a href="/cs">CS</a>
+		</li>
+		<li>
+		  <a href="/drafts">drafts</a>
+		</li>
+		<li>
+		  <a href="/marketing">marketing</a>
+		</li>
+		<li>
+		  <a href="/mastery">mastery</a>
+		</li>
+		<li>
+		  <a href="/rationality">rationality</a>
+		</li>
+		<li>
+		  <a href="/startup">startup</a>
+		</li>
+		<li class="active">
+		  <a href="/webdev">webdev</a>
+		</li>
+	      </ul>
+	    </div> <!-- End .dropdown -->
+	    <!-- 
+	    <a class="btn btn-default"  href="">
+	      <i class="fa fa-reddit-square"></i>
+	    </a>
+	    <a class="btn btn-default" href="">
+	      <i class="fa fa-youtube-square"></i>
+	    </a>
+	     -->
+	    
+	    <!-- Other menus from pelicanconf -->
+	    <a class="btn btn-default" href="/services" id="services-link">
+	      Services
+	    </a>
+
+
+	  </div>
+	</div><!-- End .col-xs-12 -->
+      </div>   <!-- End .row .cta -->
+    </div>   <!-- End .container -->
+</div>   <!-- End .main-menu -->
+</header>
+
+<div class="page">
+<div class="container post-detail">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 post-detail">
+      <article class="post">
+	<a href="/post/deploying-mastodon-on-digital-ocean"><h1>Deploying Mastodon on Digital Ocean</h1></a>
+	<p><img alt="" src="/images/deploying-mastodon/mastodon.png"></p>
+<p><a href="https://github.com/tootsuite/mastodon">Mastodon</a> is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on <a href="http://digitalocean.com">Digital Ocean</a>.</p>
+<h2>Set up a Droplet</h2>
+<p>Create a new docker droplet:
+<img alt="" src="https://raw.githubusercontent.com/raymestalez/django-react-blog/master/assets/docker-droplet.png"></p>
+<p>This droplet has almost everything we will need preinstalled.</p>
+<p>You will receive an email from DO with the credentials you can use to log in to start setting up the server.</p>
+<p>Connect to the server as a root user, using ip and password from the email:</p>
+<div class="highlight"><pre><span></span>ssh root@[ip-from-email]
+</pre></div>
+
+
+<p>You will be prompted to change the default password, so do that.</p>
+<p>Then create a new user with the username you like, and grant him the sudo powers:</p>
+<div class="highlight"><pre><span></span>adduser ray
+gpasswd -a ray sudo
+</pre></div>
+
+
+<h2>Connect domain name</h2>
+<p>Let's also immediately point your domain name to the droplet. After buying the domain(I recommend using <a href="http://namecheap.com">namecheap</a>), change the Custom DNS settings to look like this:
+<img alt="" src="http://i.imgur.com/FxKpsob.png"></p>
+<p>Then, in DO's networking tab, create a domain, and add an A record pointing to the droplet:
+<img alt="" src="http://i.imgur.com/AJppAHP.png"></p>
+<p>Now you will be able to ssh into your server using your new username and a domain name:</p>
+<div class="highlight"><pre><span></span>ssh ray@hackertribe.io
+</pre></div>
+
+
+<h2>Install and configure basic stuff</h2>
+<p>Update and upgrade all the software:</p>
+<div class="highlight"><pre><span></span>sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade
+</pre></div>
+
+
+<p>Install nginx(we'll use it to serve our droplet on the right port), and your favorite text editor:</p>
+<div class="highlight"><pre><span></span>sudo apt-get install nginx emacs
+</pre></div>
+
+
+<p>Now let's add docker to the sudo group, that will allow us to run all the docker commands without sudo:</p>
+<div class="highlight"><pre><span></span>sudo usermod -aG docker $USER
+sudo service docker restart
+</pre></div>
+
+
+<h2>Clone and configure Mastodon</h2>
+<p>Clone the repo and cd into it:</p>
+<div class="highlight"><pre><span></span>git clone https://github.com/tootsuite/mastodon.git
+cd mastodon
+</pre></div>
+
+
+<p>Now let's configure some settings.  First, rename the file <code>.env.production.sample</code> into <code>.env.production</code> and open it.</p>
+<p>Set the database username/password settings:</p>
+<div class="highlight"><pre><span></span>DB_USER=your_username
+DB_NAME=your_databasename
+DB_PASS=your_password
+</pre></div>
+
+
+<p>Set your domain name:</p>
+<div class="highlight"><pre><span></span>LOCAL_DOMAIN=hackertribe.io
+</pre></div>
+
+
+<p>And enable https:</p>
+<div class="highlight"><pre><span></span>LOCAL_HTTPS=true
+</pre></div>
+
+
+<p>Run <code>docker-compose run --rm web rake secret</code> to generate PAPERCLIP_SECRET, SECRET_KEY_BASE, and OTP_SECRET.</p>
+<h3>Configure the email server</h3>
+<p>Create a <a href="https://sendgrid.com/">SendGrid</a> account, go to Settings &gt; API Keys, and generate an API key.</p>
+<p>Then set up the config like this:</p>
+<div class="highlight"><pre><span></span>SMTP_SERVER=smtp.sendgrid.net
+SMTP_PORT=587
+SMTP_LOGIN=apikey
+SMTP_PASSWORD=
+SMTP_FROM_ADDRESS=youremail@gmail.com
+</pre></div>
+
+
+<p>(for SMTP_LOGIN literally just use &quot;apikey&quot;)</p>
+<h3>Configure the site info</h3>
+<p>Open the file <code>/mastodon/config/settings.yml</code>, and enter the information about your instance(title, description, etc).</p>
+<h2>Build the containers</h2>
+<p>Before we can build the containers, we need to add a swap file, without it my $10/month droplet was running out of memory during the build process. To add swap, execute these commands:</p>
+<div class="highlight"><pre><span></span>sudo fallocate -l 1G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+</pre></div>
+
+
+<p>(you can read more in depth about it <a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04">here</a>)</p>
+<p>Now let's finally build our containers! (It will take a few minutes)</p>
+<div class="highlight"><pre><span></span>docker-compose build
+docker-compose up -d
+</pre></div>
+
+
+<p>(the -d flag means that we want to run it in the background mode. You can try running it without this flag, and you will see the log of everything that's going on on the screen)</p>
+<h2>Create the DB and migrate</h2>
+<p>Now we need to run several commands in the db container to create the database.</p>
+<p>SSH into the container:</p>
+<div class="highlight"><pre><span></span>docker exec -i -t mastodon_db_1  /bin/bash
+</pre></div>
+
+
+<p>Switch to the postgres user:</p>
+<div class="highlight"><pre><span></span>su - postgres
+</pre></div>
+
+
+<p>Create a user for your db(use the username and password you've just set in the .env.production)</p>
+<div class="highlight"><pre><span></span>createuser -P your_username
+</pre></div>
+
+
+<p>Create a database, giving the ownership rights to the user:</p>
+<div class="highlight"><pre><span></span>createdb your_databasename -O your_username
+</pre></div>
+
+
+<p>Now you can get back to your own user, and run the migrations:</p>
+<div class="highlight"><pre><span></span>docker-compose run --rm web rails db:migrate
+</pre></div>
+
+
+<h2>Precompile assets</h2>
+<p>Now you can precompile the assets:</p>
+<div class="highlight"><pre><span></span>docker-compose run --rm web rails assets:precompile
+</pre></div>
+
+
+<p>After this has finished, restart the containers:</p>
+<div class="highlight"><pre><span></span>docker stop $(docker ps -a -q) &amp;amp;&amp;amp; docker-compose up -d
+</pre></div>
+
+
+<p>And now your mastodon instance will run on yourdomain.com:3000!!</p>
+<h2>Setting up nginx and SSL</h2>
+<p>First, follow <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04">this guide</a> to generate SSL keys and set up the basic nginx configuration.</p>
+<p>Then, because the docker containers are serving the application on the port 3000, we will need to use nginx to proxy all the requests to them. </p>
+<p>Create the file <code>/etc/nginx/sites-enabled/mastodon_nginx.conf</code>, and copy the settings from <a href="https://github.com/tootsuite/mastodon/blob/master/docs/Running-Mastodon/Production-guide.md">here</a>.</p>
+<p>Now, after you restart nginx:</p>
+<div class="highlight"><pre><span></span>sudo /etc/init.d/nginx restart
+</pre></div>
+
+
+<p>It will serve your Mastodon instance! </p>
+<h2>Conclusion</h2>
+<p>Congratulations =) Create an account, test things, and invite some people to use your instance!</p>
+<p>I also recommend submitting a link to your instance to <a href="https://instances.mastodon.xyz">this list</a> to make it easier for people to discover it.</p>
+<p>If you're looking for some help with deployment - send an email to <strong>contact@startuplab.io</strong>, and I will setup mastodon for you($100).</p>
+<p>Also, always feel free to toot at me at <a href="https://mastodon.social/@startuplab">@startuplab@mastodon.social</a>, I will be happy to answer your questions =)</p>
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/webdev">webdev</a>
+    </span>
+	      
+    <span class="label label-default">
+      <a href="/tag/Webdev">Webdev</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Devops">Devops</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Mastodon">Mastodon</a>
+    </span>
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
+<div class="row subscription-box"  id="subscription-box">
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+	<div class="col-xs-12 col-md-6 cta-description">
+	  <div class="cta-text">
+	    Receive weekly digest of my best posts!
+	  </div>
+	</div> <!-- End col-xs-12 -->
+
+	<div class="col-xs-12 col-md-6">
+	  <form class="subscription-form"
+		action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=4d8030b35b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscription-form" target="_blank" novalidate>
+	    
+	    <input type="email" name="EMAIL"
+		   class="form-control" placeholder="email" />
+            <input name="SRC" type="hidden" id="email-src" />
+            <input name="OPTINLOC" type="hidden" value="subscription-box" />	    
+	    <input type="hidden"
+		   name="b_0f23c7984541d915d1108a16e_4d8030b35b"
+		   tabindex="-1" value="">	    
+	    <button class="btn btn-default" type="submit">
+	      Subscribe
+	    </button>
+	    <a class="btn btn-rss" href="/feeds/posts.atom.xml">
+	      <i class="fa fa-rss"></i>
+	    </a>
+	  </form>
+	</div> <!-- End .col-xs-12 -->
+      </div> <!-- End .col-md-12 col-sm-12 -->
+    </div> <!-- End .panel -->
+  </div> <!-- End .col-md-12 -->
+</div> <!-- End .subscription-box -->
+
+<div class="post-suggestions">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-4">
+      <a href="/free-guide">
+	<article class="post-box">
+	  <div class="thumbnail"
+	       style="background-image:
+		      url('/static/img/free-guide.png');"
+	       >
+	  </div>
+	  <div class="description">
+	    <h1>Free Guide</h1>
+	    <p>Download our free guide and learn how to come up with a profitable idea
+	    for your first online business.</p>
+	  </div>
+	</article>
+      </a>
+    </div>   <!-- End .col-xs-12 col-sm-4 -->
+    <!-- 
+    <div class="col-xs-12 col-sm-4">
+      <a href="/post/what-should-i-learn-as-a-founder">
+	<article class="post-box">
+	  <div class="thumbnail"
+	       style="background-image:
+		      url('/images/laptop-spaceship.jpg');"
+	       >
+	  </div>
+	  <div class="description">
+	    <h1>Founder Skills</h1>
+	    <p>What should I learn as an aspiring founder?</p>
+	  </div>
+	</article>
+      </a>
+    </div> -->   <!-- End .col-xs-12 col-sm-4 -->    
+
+    <div class="col-xs-12 col-sm-4">
+      <a href="https://www.reddit.com/r/IndieFounders">
+	<article class="post-box">
+	  <div class="thumbnail"
+	       style="background-image:
+		      url('/static/img/reddit-alien-blue.jpg');"
+	       >
+	  </div>
+	  <div class="description">
+	    <h1>Indie Founders</h1>
+	    <p>Join our community, ask questions, exchange advice and feedback.</p>
+	  </div>
+	</article>
+      </a>
+    </div>   <!-- End .col-xs-12 col-sm-4 -->
+
+    <div class="col-xs-12 col-sm-4">
+      <a href="/services">
+	<article class="post-box">
+	  <div class="thumbnail"
+	       style="background-image:
+		      url('/static/img/services-banner2.png');"
+	       >
+	  </div>
+	  <div class="description">
+	    <h1>Our Services</h1>
+	    <p>We help non-technical founders to create, launch, and grow their websites and applications.</p>
+	  </div>
+	</article>
+      </a>
+    </div>   <!-- End .col-xs-12 col-sm-4 -->
+    
+
+  </div> <!-- End .row .edit -->
+</div> <!-- End .story-suggestions -->      <br/>
+    </div> <!-- End col-md-12 -->
+  </div>   <!-- End .row -->
+</div>	   <!-- end .container -->
+</div>
+
+<footer>
+</footer>
+
+<div id="subscribe" class="modal fade" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+	  <form class="subscription-form"
+		action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=4d8030b35b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscription-form" target="_blank" novalidate>
+	    
+	    <input type="email" name="EMAIL"
+		   class="form-control" placeholder="email" />
+            <input name="SRC" type="hidden" id="email-src-modal" />
+            <input name="OPTINLOC" type="hidden" value="subscription-modal" />	    
+	    
+	    <input type="hidden"
+		   name="b_0f23c7984541d915d1108a16e_4d8030b35b"
+		   tabindex="-1" value="">	    
+	    <button class="btn btn-default" type="submit">
+	      Subscribe
+	    </button>
+	    <a class="btn btn-rss" href="/feeds/posts.atom.xml">
+	      <i class="fa fa-rss"></i>
+	    </a>
+	  </form>
+      </div>
+    </div>
+  </div>
+</div>	 <!-- End .modal -->
+
+
+
+<script src="/static/js/startuplab.min.js" async></script>
+
+</body>
+</html>

@@ -59,10 +59,22 @@
 		  <a href="/advice">advice</a>
 		</li>
 		<li>
-		  <a href="/insights">insights</a>
+		  <a href="/cs">CS</a>
+		</li>
+		<li>
+		  <a href="/drafts">drafts</a>
 		</li>
 		<li>
 		  <a href="/marketing">marketing</a>
+		</li>
+		<li>
+		  <a href="/mastery">mastery</a>
+		</li>
+		<li>
+		  <a href="/rationality">rationality</a>
+		</li>
+		<li>
+		  <a href="/startup">startup</a>
 		</li>
 		<li>
 		  <a href="/webdev">webdev</a>
@@ -98,6 +110,96 @@
     <div class="col-md-12 col-sm-12">
 
       
+      <article class="post">
+	<a href="/post/deploying-mastodon-on-digital-ocean"><h1>Deploying Mastodon on Digital Ocean</h1></a>
+	<p><img alt="" src="/images/deploying-mastodon/mastodon.png"></p>
+<p><a href="https://github.com/tootsuite/mastodon">Mastodon</a> is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on <a href="http://digitalocean.com">Digital Ocean</a>.</p>
+<h2>Set up a Droplet</h2>
+<p>Create a new docker droplet:
+<img alt="" src="https://raw.githubusercontent.com/raymestalez/django-react-blog/master/assets/docker-droplet.png"></p>
+<p>This droplet has almost everything we will need preinstalled.</p>
+<p>You will receive an email from DO with the credentials you can use to log in to start setting up the server.</p>
+<p>Connect to the server as a root user, using ip and password from the email:</p>
+<div class="highlight"><pre><span></span>ssh root@[ip-from-email]
+</pre></div>
+
+
+<p>You will be prompted to change the default password, so do that.</p>
+<p>Then create a new user with the username you like, and grant him the sudo powers:</p>
+<div class="highlight"><pre><span></span>adduser ray
+gpasswd -a ray sudo
+</pre></div>
+
+
+<h2>Connect domain name</h2>
+<p>Let's also immediately point your domain name to the droplet …</p>
+
+
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/webdev">webdev</a>
+    </span>
+	      
+    <span class="label label-default">
+      <a href="/tag/Webdev">Webdev</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Devops">Devops</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Mastodon">Mastodon</a>
+    </span>
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
+      <article class="post">
+	<a href="/post/setting-up-ssl"><h1>Setting up SSL with nginx on Ubuntu server</h1></a>
+	<p><img alt="" src="/images/ssl2.png"></p>
+<p>For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.</p>
+
+
+	<a class="read-more" href="/post/setting-up-ssl">Read more...</a>
+	<br/>
+
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/webdev">webdev</a>
+    </span>
+	      
+    <span class="label label-default">
+      <a href="/tag/Webdev">Webdev</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Devops">Devops</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Mastodon">Mastodon</a>
+    </span>
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
       <article class="post">
 	<a href="/post/fullstack-web-development-roadmap"><h1>Full-Stack Web Development - the Complete Roadmap</h1></a>
 	<p><img alt="" src="/images/webdev-roadmap-1.jpeg"></p>

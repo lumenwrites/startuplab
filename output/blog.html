@@ -69,10 +69,22 @@
 		  <a href="/advice">advice</a>
 		</li>
 		<li>
-		  <a href="/insights">insights</a>
+		  <a href="/cs">CS</a>
+		</li>
+		<li>
+		  <a href="/drafts">drafts</a>
 		</li>
 		<li>
 		  <a href="/marketing">marketing</a>
+		</li>
+		<li>
+		  <a href="/mastery">mastery</a>
+		</li>
+		<li>
+		  <a href="/rationality">rationality</a>
+		</li>
+		<li>
+		  <a href="/startup">startup</a>
 		</li>
 		<li>
 		  <a href="/webdev">webdev</a>
@@ -108,6 +120,181 @@
     <div class="col-md-12 col-sm-12">
 
       
+      <article class="post">
+	<a href="/post/deploying-mastodon-on-digital-ocean"><h1>Deploying Mastodon on Digital Ocean</h1></a>
+	<p><img alt="" src="/images/deploying-mastodon/mastodon.png"></p>
+<p><a href="https://github.com/tootsuite/mastodon">Mastodon</a> is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on <a href="http://digitalocean.com">Digital Ocean</a>.</p>
+<h2>Set up a Droplet</h2>
+<p>Create a new docker droplet:
+<img alt="" src="https://raw.githubusercontent.com/raymestalez/django-react-blog/master/assets/docker-droplet.png"></p>
+<p>This droplet has almost everything we will need preinstalled.</p>
+<p>You will receive an email from DO with the credentials you can use to log in to start setting up the server.</p>
+<p>Connect to the server as a root user, using ip and password from the email:</p>
+<div class="highlight"><pre><span></span>ssh root@[ip-from-email]
+</pre></div>
+
+
+<p>You will be prompted to change the default password, so do that.</p>
+<p>Then create a new user with the username you like, and grant him the sudo powers:</p>
+<div class="highlight"><pre><span></span>adduser ray
+gpasswd -a ray sudo
+</pre></div>
+
+
+<h2>Connect domain name</h2>
+<p>Let's also immediately point your domain name to the droplet …</p>
+
+
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/webdev">webdev</a>
+    </span>
+	      
+    <span class="label label-default">
+      <a href="/tag/Webdev">Webdev</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Devops">Devops</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Mastodon">Mastodon</a>
+    </span>
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
+      <article class="post">
+	<a href="/post/expected-utility"><h1>Expected Utility</h1></a>
+	<p>Imagine I offer you a gamble. I will spin the wheel that looks like this:</p>
+<p><img alt="" src="https://cdn-images-1.medium.com/max/1520/1*hJtobFtiK-N_SM0isn0HWg.png"></p>
+<p>And you win the amount of money that it will choose. If it hits a negative number you owe me that much. Should you play or not?</p>
+
+
+	<a class="read-more" href="/post/expected-utility">Read more...</a>
+	<br/>
+
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/rationality">rationality</a>
+    </span>
+	      
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
+      <article class="post">
+	<a href="/post/recursion"><h1>What is Recursion?</h1></a>
+	<p><img alt="" src="https://cdn-images-1.medium.com/max/1520/1*NXs4iBMjyXG-4Zekq-wKHQ.png"></p>
+<h2>What is Recursion?</h2>
+<p>Recursion simply means “self reference”. When something refers to itself or describes itself, it is called recursive.</p>
+
+
+	<a class="read-more" href="/post/recursion">Read more...</a>
+	<br/>
+
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/CS">CS</a>
+    </span>
+	      
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
+      <article class="post">
+	<a href="/post/setting-up-ssl"><h1>Setting up SSL with nginx on Ubuntu server</h1></a>
+	<p><img alt="" src="/images/ssl2.png"></p>
+<p>For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.</p>
+
+
+	<a class="read-more" href="/post/setting-up-ssl">Read more...</a>
+	<br/>
+
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/webdev">webdev</a>
+    </span>
+	      
+    <span class="label label-default">
+      <a href="/tag/Webdev">Webdev</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Devops">Devops</a>
+    </span>
+    <span class="label label-default">
+      <a href="/tag/Mastodon">Mastodon</a>
+    </span>
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
+      <article class="post">
+	<a href="/post/value-arbitrage"><h1>Value Arbitrage</h1></a>
+	<p>This is an extremely useful idea that I've learned just recently. In fincance, &quot;arbitrage&quot; means buying and selling things in different markets to take the advantage of difference in price. Like buying a toy in India for $15, and then selling it for $25 in the US.</p>
+<p>Turns out, you can arbitrage not just products, but also information, knowledge, skill, or even human relationships.</p>
+<p>For example, let's say you have met two amazing people who don't know each other. When you introduce them to each other, you generate a massive amount of value for both of them essentially out of nothing - you have given each of them a gift of knowing someone great.</p>
+<p>Another example, is arbitraging information. Eliezer Yudkowsky have learned a lot about rationality and human biases from the books he has read, and then parlayed it into …</p>
+
+
+<!-- Footer -->
+<div class="post-footer">
+  <div class="tags">
+    <span class="label label-default">
+      <a href="/startup">startup</a>
+    </span>
+	      
+  </div> <!-- tags -->
+
+  <!-- Actions -->
+    <div class="actions">
+      <!-- Comments -->
+	            
+	      
+    </div> <!-- End .actions -->
+  <div class="clearfix"></div>
+</div>      
+      </article>
+
       <article class="post">
 	<a href="/post/fullstack-web-development-roadmap"><h1>Full-Stack Web Development - the Complete Roadmap</h1></a>
 	<p><img alt="" src="/images/webdev-roadmap-1.jpeg"></p>
@@ -171,7 +358,7 @@ shared the most important things they have learned from building a business.</p>
 <div class="post-footer">
   <div class="tags">
     <span class="label label-default">
-      <a href="/insights">insights</a>
+      <a href="/startup">startup</a>
     </span>
 	      
     <span class="label label-default">
@@ -238,143 +425,6 @@ them:</p>
 </div>      
       </article>
 
-      <article class="post">
-	<a href="/post/find-freelance-clients"><h1>How can I find my first freelance clients?</h1></a>
-	<p><img alt="" src="/images/startup-advice.png"></p>
-<p>This is a question I get asked very often, so I’ve decided to share my
-collection of the most effective strategies that will help you get started:</p>
-
-
-	<a class="read-more" href="/post/find-freelance-clients">Read more...</a>
-	<br/>
-
-<!-- Footer -->
-<div class="post-footer">
-  <div class="tags">
-    <span class="label label-default">
-      <a href="/marketing">marketing</a>
-    </span>
-	      
-    <span class="label label-default">
-      <a href="/tag/freelance">freelance</a>
-    </span>
-  </div> <!-- tags -->
-
-  <!-- Actions -->
-    <div class="actions">
-      <!-- Comments -->
-	            
-	      
-    </div> <!-- End .actions -->
-  <div class="clearfix"></div>
-</div>      
-      </article>
-
-      <article class="post">
-	<a href="/post/invent-future-from-the-future"><h1>Invent the future from the future</h1></a>
-	<p><img alt="" src="/images/startup-insights.png"></p>
-<p>Today’s notes are from “<a href="https://www.youtube.com/watch?v=id1WShzzMCQ">How to Invent the
-Future</a>”, a brilliant lecture by
-Alan Kay at Startup School:</p>
-
-
-	<a class="read-more" href="/post/invent-future-from-the-future">Read more...</a>
-	<br/>
-
-<!-- Footer -->
-<div class="post-footer">
-  <div class="tags">
-    <span class="label label-default">
-      <a href="/insights">insights</a>
-    </span>
-	      
-    <span class="label label-default">
-      <a href="/tag/freelance">freelance</a>
-    </span>
-  </div> <!-- tags -->
-
-  <!-- Actions -->
-    <div class="actions">
-      <!-- Comments -->
-	            
-	      
-    </div> <!-- End .actions -->
-  <div class="clearfix"></div>
-</div>      
-      </article>
-
-      <article class="post">
-	<a href="/post/keyword-difficulty"><h1>What is the meaning of difficulty level for a keyword in SEO?</h1></a>
-	<p><img alt="" src="/images/startup-advice.png"></p>
-<p>The difficulty of a keyword depends on how much competition there is for it.</p>
-<p>Basically, if there are a lot of high authority websites spending money on SEO
-for a certain keyword, you won’t be able to compete with them. That’s why you
-should look for long tail keywords with low competition, but high search volume.</p>
-
-
-	<a class="read-more" href="/post/keyword-difficulty">Read more...</a>
-	<br/>
-
-<!-- Footer -->
-<div class="post-footer">
-  <div class="tags">
-    <span class="label label-default">
-      <a href="/advice">advice</a>
-    </span>
-	      
-    <span class="label label-default">
-      <a href="/tag/SEO">SEO</a>
-    </span>
-  </div> <!-- tags -->
-
-  <!-- Actions -->
-    <div class="actions">
-      <!-- Comments -->
-	            
-	      
-    </div> <!-- End .actions -->
-  <div class="clearfix"></div>
-</div>      
-      </article>
-
-      <article class="post">
-	<a href="/post/what-should-i-learn-as-a-founder"><h1>What should I learn as an aspiring founder?</h1></a>
-	<p><img alt="" src="/images/startup-advice.png"></p>
-<blockquote>
-<p>I love challenges and I would love to start my own online business. I’m ready to
-work hard and learn. What would you advise me to study on my free time to
-generate new ideas and start my own online business?</p>
-</blockquote>
-
-
-	<a class="read-more" href="/post/what-should-i-learn-as-a-founder">Read more...</a>
-	<br/>
-
-<!-- Footer -->
-<div class="post-footer">
-  <div class="tags">
-    <span class="label label-default">
-      <a href="/advice">advice</a>
-    </span>
-	      
-    <span class="label label-default">
-      <a href="/tag/skills">skills</a>
-    </span>
-    <span class="label label-default">
-      <a href="/tag/getting-started">getting-started</a>
-    </span>
-  </div> <!-- tags -->
-
-  <!-- Actions -->
-    <div class="actions">
-      <!-- Comments -->
-	            
-	      
-    </div> <!-- End .actions -->
-  <div class="clearfix"></div>
-</div>      
-      </article>
-
  <!-- End looping through posts -->
 
 <!-- Pagination -->
@@ -386,6 +436,9 @@ generate new ideas and start my own online business?</p>
       Page 1
     </span>
 
+      <a href="/blog2.html"
+      <i class="fa fa-chevron-right right"></i>    
+    </a>
   </span>
 </div>
 
