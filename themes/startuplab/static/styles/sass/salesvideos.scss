@@ -1,0 +1,85 @@
+header {
+    display: none;
+}
+body {
+    background: #F7F5F3;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: bold;
+}
+*, p, a {
+    font-family: "Source Sans Pro",Helvetica,sans-serif;
+    font-size: 22px;
+}
+
+h1 {
+    u, em {
+	font-size: 36px;
+	color: #3d454b;
+    }
+}
+
+
+.salesvideos-top-cta {
+    background: rgba(44, 100, 153, .92) url("/static/salesvideos/background1.jpg") no-repeat center;
+    background: #355e96 url("/static/img/blue-pattern-background-1920-min.png") no-repeat center;
+    background: rgba(44, 100, 153, .92);
+    
+    background-size: cover;
+    padding: 40px 80px;
+    positon: relative;
+
+    .logo {
+	width: 90px;
+	float:left;
+	margin: 0px 20px 20px 0;
+    }
+    h1 {
+	font-size: 59px;
+	font-size: 53px;	
+	color: white;
+	margin-bottom: 0;	
+    }
+    h3 {
+        color: white;
+	text-transform: uppercase;
+    }
+    p {
+        color: white;	
+    }
+    .tagline {
+	font-weight: 100;
+	font-size: 28px;
+	font-size: 25px;	
+	color: white;
+    }
+
+    .options {
+	height: auto!important;
+	text-align: center;
+	font-size: 18px;
+    }    
+    .btn-cta {
+	width: 100%;
+	padding: 20px;
+    }
+}
+
+
+.sales-copy {
+    article {
+    background: white url("/static/salesvideos/logo.png") no-repeat center;
+    }
+    h1, h2 {
+	text-align: center;
+    }
+    article {
+	margin: 0;
+    }
+    .btn-cta {
+	width: 100%;
+	padding: 40px;
+    }
+}

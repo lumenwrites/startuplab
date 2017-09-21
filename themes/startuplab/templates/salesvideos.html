@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="salesvideos">
+
+<div class="salesvideos-top-cta">  
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <img src="/static/salesvideos/logo.png" class="logo" />
+	<h1>Sales Video Ninja</h1>
+	<div class="tagline">Killer Sales Videos for Websites & Businesses</div>
+    </div> <!-- End col-md-12 -->
+  </div>   <!-- End .row -->
+
+  <div class="row">
+
+
+    <div class="col-xs-8">
+	  <!-- Player -->
+	  <video
+	     id="video"
+	     class="video-js vjs-default-skin vjs-fluid"
+	     controls
+	     autoplay
+	     width="960" height="540"
+	     data-setup='{ "techOrder": ["youtube"]}'
+	     >
+	  </video>	
+	  <!-- , "playbackRates": [ 0.75, 1, 1.25, 1.5, 2]a -->
+    </div> <!-- End col-md-8 -->
+    
+
+    <div class="col-xs-4">
+      <h3> Get a powerful high-converting sales video that works </h3>
+      <p> Promote your business, generate leads and convert sales.</p>
+      <!-- <p>1000+ happy clients in 29 countries</p> -->
+      <select class="form-control options">
+	<option value="saab">2min, your script ($300)</option>
+	<option value="volvo" selected>3-5 min video, in 14 days ($445)</option>
+	<option value="mercedes">Premium ($4000)</option>
+      </select>      
+      <a class="btn btn-cta" href="#contact"
+	 data-toggle="modal" data-target="#contact">
+	Order now!
+	<i class="fa fa-arrow-right right"></i>
+      </a>
+      
+    </div>
+    
+
+  </div>   <!-- End .row -->
+</div>	   <!-- End .container -->
+</div>	   <!-- End .top-cta -->
+
+<div class="container sales-copy">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <article>
+	{{ page.content }}	
+      </article>
+
+    </div> <!-- End col-md-12 -->
+  </div>   <!-- End .row -->
+</div>	   <!-- end .container -->
+
+<!-- Video -->
+<script src="/static/js/vendor/jquery.min.js"></script>
+<script src="/static/js/videojs/video.js"></script>
+<script src="/static/js/videojs/Youtube.min.js"></script>
+<script src="/static/js/videojs/videojs-playlist.min.js"></script>
+<script src="/static/js/videojs/videojs.imageOverlay.js"></script>
+<script src="/static/js/videojs/videojs-remember.js"></script>
+<script src="/static/js/videojs/player.js"></script>
+
+
+</div>	   <!-- End .salesvideos -->
+{% endblock %}
+
+
+{% block meta %}
+<title>Sales Videos</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/styles/css/salesvideos.css">
+<link rel="stylesheet" href="/static/styles/css/video.css">
+{% endblock meta %}
