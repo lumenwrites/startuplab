@@ -74,21 +74,23 @@ h1 u, h1 em {
 .salesvideos-top-cta .btn-cta {
   width: 100%;
   padding: 20px;
+  position: absolute;
+  bottom: 0;
 }
 
-/* line 72, ../sass/salesvideos.scss */
+/* line 74, ../sass/salesvideos.scss */
 .sales-copy article {
   background: white url("/static/salesvideos/logo.png") no-repeat center;
 }
-/* line 75, ../sass/salesvideos.scss */
+/* line 77, ../sass/salesvideos.scss */
 .sales-copy h1, .sales-copy h2 {
   text-align: center;
 }
-/* line 78, ../sass/salesvideos.scss */
+/* line 80, ../sass/salesvideos.scss */
 .sales-copy article {
   margin: 0;
 }
-/* line 81, ../sass/salesvideos.scss */
+/* line 83, ../sass/salesvideos.scss */
 .sales-copy .btn-cta {
   width: 100%;
   padding: 40px;

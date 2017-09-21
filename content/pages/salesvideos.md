@@ -102,10 +102,14 @@ WAKE UP DUMMY!!!
 
 ## WE ARE SO CONFIDENT THAT A SAMURAI VIDEO WILL INCREASE YOUR WEBSITE'S SALES THAT IF YOUR NEW VIDEO FAILS TO INCREASE SALES IN 14 DAYS YOU CAN SIMPLY EMAIL US FOR A FULL 100% REFUND
 
-![](/images/salesvideos/6.png)
 
-<a class="btn btn-cta" href="#contact"
-data-toggle="modal" data-target="#contact">
+<a href="#salesvideos-contact" data-toggle="modal" data-target="#salesvideos-contact">
+<img src="/images/salesvideos/6.png"/>
+</a>
+
+
+<a class="btn btn-cta" href="#salesvideos-contact"
+data-toggle="modal" data-target="#salesvideos-contact">
 Order now!
 <i class="fa fa-arrow-right right"></i>
 </a>
