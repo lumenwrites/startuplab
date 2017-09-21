@@ -5,6 +5,7 @@ body {
     background: #F7F5F3;
 }
 
+
 h1, h2, h3, h4, h5 {
     font-family: "Bitter", Georgia, serif;
     font-weight: bold;
@@ -30,17 +31,31 @@ h1 {
     background-size: cover;
     padding: 40px 80px;
     positon: relative;
+    @media(max-width: 985px) {
+	text-align: center;
+	padding: 20px 0px;
+    }
 
     .logo {
 	width: 90px;
 	float:left;
 	margin: 0px 20px 20px 0;
+	@media(max-width: 960px) {
+	    float:none;
+	    margin: 0;
+	    margin-bottom: 20px;
+	}	
     }
     h1 {
 	font-size: 59px;
 	font-size: 53px;	
 	color: white;
 	margin-bottom: 0;	
+    }
+    #video {
+	@media(max-width: 985px) {
+	    margin: 20px 0;
+	}	
     }
     h3 {
         color: white;
@@ -56,6 +71,9 @@ h1 {
 	color: white;
     }
 
+    .order-now {
+        min-height: 220px;
+    }
     .options {
 	height: auto!important;
 	text-align: center;
@@ -66,13 +84,32 @@ h1 {
 	padding: 20px;
 	position: absolute;
 	bottom: 0;
+	left: 0;	
     }
 }
 
 
 .sales-copy {
     article {
-    background: white url("/static/salesvideos/logo.png") no-repeat center;
+	position: relative;
+	background: white;
+	z-index: 1;
+	/* 
+	&:before {
+	    content: "";
+	    background: white url("/images/salesvideos/logo-big2.png") no-repeat center;
+	    opacity: 0.2;
+	    background-position-x: 10px;
+	    background-size: 160%;
+	    background-position-y: 330px;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    position: absolute;
+	    z-index: -1;
+	}
+       */
     }
     h1, h2 {
 	text-align: center;

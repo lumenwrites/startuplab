@@ -29,6 +29,7 @@
     /* Don't hide on mobile */
     /* display: flex!important; */
 }
+
 .vjs-volume-bar.vjs-slider-horizontal {
     margin: 18px;
 }
@@ -51,6 +52,11 @@
     z-index: 100;
 }
 
+/* Fullscreen control */
+.vjs-fullscreen-control {
+    width: 50px!important;
+}
+/* Overlay image */
 #vjs-image-overlay-holder {
     position: absolute;
     top: 0;

@@ -34,13 +34,13 @@
   /* display: flex!important; */
 }
 
-/* line 32, ../sass/video.scss */
+/* line 33, ../sass/video.scss */
 .vjs-volume-bar.vjs-slider-horizontal {
   margin: 18px;
 }
 
 /* Playback speed menu */
-/* line 36, ../sass/video.scss */
+/* line 37, ../sass/video.scss */
 .vjs-menu li.vjs-selected,
 .vjs-menu li.vjs-selected:focus,
 .vjs-menu li.vjs-selected:hover {
@@ -48,23 +48,30 @@
   background-color: rgba(115, 133, 159, 0.5);
 }
 
-/* line 42, ../sass/video.scss */
+/* line 43, ../sass/video.scss */
 .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
   background-color: #2B333F;
   /* background-color: rgba(43,51,63,0.7); */
 }
 
-/* line 47, ../sass/video.scss */
+/* line 48, ../sass/video.scss */
 .vjs-menu-item {
   padding: 5px 0;
 }
 
-/* line 50, ../sass/video.scss */
+/* line 51, ../sass/video.scss */
 .vjs-menu {
   z-index: 100;
 }
 
-/* line 54, ../sass/video.scss */
+/* Fullscreen control */
+/* line 56, ../sass/video.scss */
+.vjs-fullscreen-control {
+  width: 50px !important;
+}
+
+/* Overlay image */
+/* line 60, ../sass/video.scss */
 #vjs-image-overlay-holder {
   position: absolute;
   top: 0;
@@ -72,7 +79,7 @@
   height: calc(100% - 42px) !important;
 }
 
-/* line 60, ../sass/video.scss */
+/* line 66, ../sass/video.scss */
 #vjs-image-overlay-holder img {
   height: 100%;
   width: 100%;

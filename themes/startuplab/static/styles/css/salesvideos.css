@@ -8,25 +8,25 @@ body {
   background: #F7F5F3;
 }
 
-/* line 8, ../sass/salesvideos.scss */
+/* line 9, ../sass/salesvideos.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Bitter", Georgia, serif;
   font-weight: bold;
 }
 
-/* line 12, ../sass/salesvideos.scss */
+/* line 13, ../sass/salesvideos.scss */
 *, p, a {
   font-family: "Source Sans Pro",Helvetica,sans-serif;
   font-size: 22px;
 }
 
-/* line 18, ../sass/salesvideos.scss */
+/* line 19, ../sass/salesvideos.scss */
 h1 u, h1 em {
   font-size: 36px;
   color: #3d454b;
 }
 
-/* line 25, ../sass/salesvideos.scss */
+/* line 26, ../sass/salesvideos.scss */
 .salesvideos-top-cta {
   background: rgba(44, 100, 153, 0.92) url("/static/salesvideos/background1.jpg") no-repeat center;
   background: #355e96 url("/static/img/blue-pattern-background-1920-min.png") no-repeat center;
@@ -35,62 +35,106 @@ h1 u, h1 em {
   padding: 40px 80px;
   positon: relative;
 }
-/* line 34, ../sass/salesvideos.scss */
+@media (max-width: 985px) {
+  /* line 26, ../sass/salesvideos.scss */
+  .salesvideos-top-cta {
+    text-align: center;
+    padding: 20px 0px;
+  }
+}
+/* line 39, ../sass/salesvideos.scss */
 .salesvideos-top-cta .logo {
   width: 90px;
   float: left;
   margin: 0px 20px 20px 0;
 }
-/* line 39, ../sass/salesvideos.scss */
+@media (max-width: 960px) {
+  /* line 39, ../sass/salesvideos.scss */
+  .salesvideos-top-cta .logo {
+    float: none;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+/* line 49, ../sass/salesvideos.scss */
 .salesvideos-top-cta h1 {
   font-size: 59px;
   font-size: 53px;
   color: white;
   margin-bottom: 0;
 }
-/* line 45, ../sass/salesvideos.scss */
+@media (max-width: 985px) {
+  /* line 55, ../sass/salesvideos.scss */
+  .salesvideos-top-cta #video {
+    margin: 20px 0;
+  }
+}
+/* line 60, ../sass/salesvideos.scss */
 .salesvideos-top-cta h3 {
   color: white;
   text-transform: uppercase;
 }
-/* line 49, ../sass/salesvideos.scss */
+/* line 64, ../sass/salesvideos.scss */
 .salesvideos-top-cta p {
   color: white;
 }
-/* line 52, ../sass/salesvideos.scss */
+/* line 67, ../sass/salesvideos.scss */
 .salesvideos-top-cta .tagline {
   font-weight: 100;
   font-size: 28px;
   font-size: 25px;
   color: white;
 }
-/* line 59, ../sass/salesvideos.scss */
+/* line 74, ../sass/salesvideos.scss */
+.salesvideos-top-cta .order-now {
+  min-height: 220px;
+}
+/* line 77, ../sass/salesvideos.scss */
 .salesvideos-top-cta .options {
   height: auto !important;
   text-align: center;
   font-size: 18px;
 }
-/* line 64, ../sass/salesvideos.scss */
+/* line 82, ../sass/salesvideos.scss */
 .salesvideos-top-cta .btn-cta {
   width: 100%;
   padding: 20px;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
-/* line 74, ../sass/salesvideos.scss */
+/* line 93, ../sass/salesvideos.scss */
 .sales-copy article {
-  background: white url("/static/salesvideos/logo.png") no-repeat center;
+  position: relative;
+  background: white;
+  z-index: 1;
+  	/* 
+  	&:before {
+  	    content: "";
+  	    background: white url("/images/salesvideos/logo-big2.png") no-repeat center;
+  	    opacity: 0.2;
+  	    background-position-x: 10px;
+  	    background-size: 160%;
+  	    background-position-y: 330px;
+  	    top: 0;
+  	    left: 0;
+  	    bottom: 0;
+  	    right: 0;
+  	    position: absolute;
+  	    z-index: -1;
+  	}
+         */
 }
-/* line 77, ../sass/salesvideos.scss */
+/* line 114, ../sass/salesvideos.scss */
 .sales-copy h1, .sales-copy h2 {
   text-align: center;
 }
-/* line 80, ../sass/salesvideos.scss */
+/* line 117, ../sass/salesvideos.scss */
 .sales-copy article {
   margin: 0;
 }
-/* line 83, ../sass/salesvideos.scss */
+/* line 120, ../sass/salesvideos.scss */
 .sales-copy .btn-cta {
   width: 100%;
   padding: 40px;

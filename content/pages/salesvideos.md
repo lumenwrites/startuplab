@@ -104,7 +104,10 @@ WAKE UP DUMMY!!!
 
 
 <a href="#salesvideos-contact" data-toggle="modal" data-target="#salesvideos-contact">
-<img src="/images/salesvideos/6.png"/>
+<div style="overflow:hidden">
+<img src="/images/salesvideos/6.png"
+style="margin-top: -20px; margin-bottom: -80px;"/>
+</div>
 </a>
 
 
@@ -119,8 +122,8 @@ Order now!
 
   
 
-email us: [studio@samuraisalesvideos.com](http://web.archive.org/web/20140107184315/mailto:studio@samuraisalesvideos.com)
+Email us: <b>studio@salesvideoninja.com</b>
 
-want to be an affiliate? email us for an info pack!
+Want to be an affiliate? email us for an info pack!
 
 
