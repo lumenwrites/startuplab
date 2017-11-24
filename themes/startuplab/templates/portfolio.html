@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="services-page">
+<div class="portfolio-page">
   <!-- CTA -->
   <div class="cta">
     <div class="container">
@@ -8,18 +8,11 @@
       <div class="row">      
 	<div class="col-xs-12">
 	  <!-- Digital Product -->
-	  <img src="/static/img/logo-transparent.png" class="logo" />	  
-	  <h1>Create the perfect Website<br/>
-	    <span class="second-line">For your Online Business</span></h1>
+	  <img src="/static/img/signature-glow.png" class="logo" />	  
+	  <h1>Ray Alez</h1>
 	  <p class="tagline">
-	    We combine stunning design and advanced technology to help you achieve online success.
+	    Full-Stack web developer
 	  </p>
-	  <br/>
-	  <a class="btn btn-cta btn-large" href="#contact"
-	     data-toggle="modal" data-target="#contact">
-	    Request a free consultation!
-	    <i class="fa fa-arrow-right right"></i>
-	  </a>
 	</div> <!-- End .col-xs-12 -->
       </div>   <!-- End .row .cta -->
     </div>   <!-- End .container -->
@@ -29,15 +22,15 @@
     <div class="container">
     <div class="row">
       <div class="col-xs-12">
-      <h2>Full range of premium web services for Small Businesses and Web Entrepreneurs</h2>
+      <h2>Skills</h2>
 	
 	<div class="service">
 	  <div class="icon">
-	    <i class="fa  fa-paint-brush"></i>
+	    <i class="fa  fa-server"></i>
 	  </div>
-	  <h2>[Design]</h2>
+	  <h2>[Backend]</h2>
 	  <p>
-	    Create a beautiful design that will delight your customers
+	    Node+Express, Python+Django, Postgres/Mongo, <br/>Docker, Nginx
 	  </p>
 	</div>
 
@@ -45,9 +38,12 @@
 	  <div class="icon">
 	    <i class="fa fa-laptop"></i>
 	  </div>	  
-	  <h2>[Development]</h2>
+	  <h2>[Frontend]</h2>
 	  <p>
-	    Build a fast and powerful website using the latest technology
+	    React+Redux,<br/>
+	    Responsive design, <br/>
+	    PWA, Electron, Expo <br/>
+	    Bootstrap, Sass, JQuery, etc
 	  </p>
 	</div>
 
@@ -55,11 +51,11 @@
 	<div class="clearfix visible-xs"></div> <!-- clearfix only on mobile -->
 	<div class="service">
 	  <div class="icon">
-	    <i class="fa fa-users"></i>
+	    <i class="fa fa-paint-brush"></i>
 	  </div>	  
-	  <h2>[Consulting]</h2>
+	  <h2>[Design]</h2>
 	  <p>
-	    Solve any technical or business problem with your existing project
+	    Web Design (PS/Illustrator/Figma), UI/UX, Optimizing Conversions
 	  </p>
 	</div>
 
@@ -69,7 +65,7 @@
 	  </div>	  
 	  <h2>[Marketing]</h2>
 	  <p>
-	      Find users, gain traction, grow your project, and sell your products
+	    Internet Marketing, SEO, SMM, Techncal Writing
 	  </p>
 	</div>
 	</div> <!-- End .col-xs-12 -->
@@ -179,57 +175,30 @@
 <div class="macbook-bg">
   <div class="testimonials">
     <!-- <h2> More than 300 happy clients </h2> -->
-    <h2> Testimonials </h2>    
-    <br/>
-    <img src="/static/img/quote-icon.png">
-    <p>
-      I have been working with many web development companies
-      from all around the world, <br/>
-      and I highly recommend to hire Startup Lab for your next project.
-    </p>
-    <hr/>
-    <p>
-      Rommy Arella @Candeed Creatives
-    </p>
-
-    <br/><br/>
-    <a class="btn btn-cta btn-large" href="#contact"
-       data-toggle="modal" data-target="#contact">
-      Let's talk about your project!
-    </a>
+    <div class="container">
+      <div class="row">      
+	<div class="col-xs-12">
+	  <h2> About </h2>    
+	  <p>
+	    Hello! My name is Ray. I am good at creating online projects that look awesome, work well, and attract a lot of users.
+	  </p>
+	  <p>
+	    All the projects above have been completely designed and developed by me, from idea to launch.
+	  </p>
+	  <p>
+	    As you can see, I have a wide variety of online-business-related skills, and I enjoy using all of them. I know how to develop a business idea, turn it into a complete website, and use online marketing to gain traction.
+	  </p>
+	  <hr/>
+	  <p>
+	    If you're interested in working with me, shoot me an email to <b>ray@startuplab.io</b>
+	  </p>
+	</div> <!-- End .col-xs-12 -->
+      </div>   <!-- End .row -->
+    </div>   <!-- End .container -->
     
   </div> <!-- End .testimonials -->
 </div>	 <!-- End .macbook-bg -->
 
-<!-- 2nd CTA -->
-<!-- 
-<div class="cta">
-  <div class="container">
-    <div class="row">      
-      <div class="col-xs-12">
-	<a class="btn btn-cta btn-large" href="#contact">
-	  Let's talk about your project!
-	</a>
-      </div>
-    </div>
-  </div>
-</div>  
- -->
-
-<!-- Social Proof -->
-<div  class="social-proof">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-	
-	<img src="/static/img/social-proof.png"/>
-
-      </div> <!-- End .col-xs-12 -->
-    </div>   <!-- End .row -->
-  </div>   <!-- End .container -->
-</div> <!-- End .services -->
-
-{% include "contact-modal.html" %}  
 
 <style>
 #subscribe-link, #services-link, .dropdown-menu {

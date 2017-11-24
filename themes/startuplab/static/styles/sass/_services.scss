@@ -348,3 +348,101 @@ footer {
     min-height:20px;    
 }
 
+/* Ray Alez Portfolio */
+.rayalez {
+    .cta {
+	background: #355e96 url("/static/img/ubuntu-orange.jpg") no-repeat center;
+	text-align: left;
+	padding: 40px 0;
+	.title {
+	    margin: auto;
+	    margin: auto;
+	    max-width: 390px;	    
+	}
+	.logo {
+	    border-radius: 4px;
+	    float: left;
+	    width: 80px;
+	    margin-right: 20px;
+	}
+	h1 {
+	    text-transform:none;
+	    color: white;
+	    margin: 4px 0 0 0px;
+	    font-size: 32px;
+	    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+	}
+	.tagline {
+	    margin-top: 20px;
+	    margin-top: 10px;
+	    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);	    
+	    /* 
+	    width: 100%;
+	    padding: 20px;
+	    color: #fefefe;
+	    background-color: rgba(10, 10, 10, 0.5);
+	   */
+	}	
+    }
+
+    .testimonials {
+	font-size: 18px;
+	b {
+	    color:white;
+	}
+	.social-media-icon {
+	    width: 40px;
+	}
+	i {
+	    font-size: 40px;
+	    color: white;
+	    line-height: 40px;
+	}
+	.fa-twitter {
+	    color: #55acee;
+	}
+	.fa-reddit {
+	    color: #ff4500;
+	    background: white;
+	    border-radius: 40px;
+	    border: 2px solid #ff4500;
+	}
+    }
+    
+}
+
+
+.portfolio-page {
+    .cta {
+	background: #355e96 url("/static/img/code-lines.png") no-repeat center;
+	background-size: cover;
+	
+	text-align: left;
+	padding: 40px 0;
+	.logo {
+	    border-radius: 4px;
+	    float: left;
+	    width: 120px;
+	    margin-right: 20px;
+	}
+	h1 {
+	    text-transform:none;
+	    color: white;
+	    margin: 4px 0 0 0px;
+	    font-size: 32px;
+	    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+	    margin-top: 20px;	    
+	}
+	.tagline {
+	    font-size: 26px;
+	    margin-top: 20px;
+	}
+    }
+    .testimonials {
+	text-align:left;
+	font-size: 18px;
+	b {
+	    color:white;
+	}
+    }
+}

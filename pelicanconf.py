@@ -49,7 +49,7 @@ INDEX_SAVE_AS = 'blog.html'
 AUTHOR_SAVE_AS = ''
 
 # Directly use page
-DIRECT_TEMPLATES = ('index', 'home', 'services','newsletter','free-guide','academy','optin','thankyou', )
+DIRECT_TEMPLATES = ('index', 'home', 'services','newsletter','free-guide','academy','optin','thankyou', 'rayalez','portfolio',)
 
 
 # Disable empty alt warning log message
