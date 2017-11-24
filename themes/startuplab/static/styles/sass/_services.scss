@@ -353,7 +353,7 @@ footer {
     .cta {
 	background: #355e96 url("/static/img/ubuntu-orange.jpg") no-repeat center;
 	text-align: left;
-	padding: 40px 0;
+	padding: 40px 0 0 0;
 	.title {
 	    /* margin: auto; */
 	    /* margin: auto; */
@@ -371,17 +371,19 @@ footer {
 	    margin: 4px 0 0 0px;
 	    font-size: 32px;
 	    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+	    line-height: 72px;
 	}
-	.tagline {
-	    margin-top: 20px;
-	    margin-top: 10px;
-	    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);	    
-	    /* 
+	.tagline-wrapper {
+    	    margin-top: 20px;
 	    width: 100%;
 	    padding: 20px;
 	    color: #fefefe;
 	    background-color: rgba(10, 10, 10, 0.5);
-	   */
+	}
+	.tagline {
+	    /* margin-top: 10px; */
+	    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.4);	     */
+	    color: white;
 	}	
     }
 
@@ -390,6 +392,12 @@ footer {
 	b {
 	    color:white;
 	}
+    }
+    
+}
+.social-media-icons {
+    height: 40px;
+    margin: -10px 0;
 	.social-media-icon {
 	    width: 40px;
 	}
@@ -398,6 +406,24 @@ footer {
 	    color: white;
 	    line-height: 40px;
 	}
+	a {
+	    display: block;
+	    float: left;
+	    margin-right: 4px;
+	}
+	.fa {
+	    border-radius: 40px;
+	    width: 40px;
+	    height:40px;
+	    text-align: center;
+	}
+	.fa-github {
+	    font-size: 47px;
+	}
+	.fa-github {
+	    color: rgba(0,0,0,0.8);
+	    background: white;
+	}
 	.fa-twitter {
 	    color: #55acee;
 	}
@@ -405,12 +431,8 @@ footer {
 	    color: #ff4500;
 	    background: white;
 	    border-radius: 40px;
-	    border: 2px solid #ff4500;
 	}
-    }
-    
 }
-
 
 .portfolio-page {
     .cta {
