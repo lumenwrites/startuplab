@@ -27,7 +27,7 @@
     <meta property="twitter:image" content="https://startuplab.io/static/img/social.png" />
 
     <!-- Feeds -->
-    <link href="/" type="application/atom+xml" rel="alternate" title="Startup Lab Webdev Atom Feed" />
+    <link href="/" type="application/atom+xml" rel="alternate" title="Startup Lab Tech Atom Feed" />
  
 </head>
 
@@ -74,10 +74,10 @@
 		<li>
 		  <a href="/rationality">rationality</a>
 		</li>
-		<li>
+		<li class="active">
 		  <a href="/tech">tech</a>
 		</li>
-		<li class="active">
+		<li>
 		  <a href="/webdev">webdev</a>
 		</li>
 	      </ul>
@@ -112,86 +112,22 @@
 
       
       <article class="post">
-	<a href="/post/deploying-mastodon-on-digital-ocean"><h1>Deploying Mastodon on Digital Ocean</h1></a>
-	<p><img alt="" src="/images/deploying-mastodon/mastodon.png"></p>
-<p><a href="https://github.com/tootsuite/mastodon">Mastodon</a> is the new social media platform, a decentralized alternative to Twitter that is currently blowing up. This is a step by step guide on how to run your own Mastodon instance on <a href="http://digitalocean.com">Digital Ocean</a>.</p>
-<h2>Set up a Droplet</h2>
-<p>Create a new docker droplet:
-<img alt="" src="https://raw.githubusercontent.com/raymestalez/django-react-blog/master/assets/docker-droplet.png"></p>
-<p>This droplet has almost everything we will need preinstalled.</p>
-<p>You will receive an email from DO with the credentials you can use to log in to start setting up the server.</p>
-<p>Connect to the server as a root user, using ip and password from the email:</p>
-<div class="highlight"><pre><span></span>ssh root@[ip-from-email]
-</pre></div>
+	<a href="/post/recursion"><h1>What is Recursion?</h1></a>
+	<p><img alt="" src="https://cdn-images-1.medium.com/max/1520/1*NXs4iBMjyXG-4Zekq-wKHQ.png"></p>
+<h2>What is Recursion?</h2>
+<p>Recursion simply means “self reference”. When something refers to itself or describes itself, it is called recursive.</p>
 
 
-<p>You will be prompted to change the default password, so do that.</p>
-<p>Then create a new user with the username you like, and grant him the sudo powers:</p>
-<div class="highlight"><pre><span></span>adduser ray
-gpasswd -a ray sudo
-</pre></div>
-
-
-<h2>Connect domain name</h2>
-<p>Let's also immediately point your domain name to the droplet …</p>
-
-
-<!-- Footer -->
-<div class="post-footer">
-  <div class="tags">
-    <span class="label label-default">
-      <a href="/webdev">webdev</a>
-    </span>
-	      
-    <span class="label label-default">
-      <a href="/tag/Webdev">Webdev</a>
-    </span>
-    <span class="label label-default">
-      <a href="/tag/Devops">Devops</a>
-    </span>
-    <span class="label label-default">
-      <a href="/tag/Mastodon">Mastodon</a>
-    </span>
-  </div> <!-- tags -->
-
-  <div class="right">
-    <a href="/rayalez"><b>@rayalez</b></a>
-  </div>
-  <!-- Actions -->
-    <div class="actions">
-      <!-- Comments -->
-	            
-	      
-    </div> <!-- End .actions -->
-  <div class="clearfix"></div>
-</div>      
-      </article>
-
-      <article class="post">
-	<a href="/post/setting-up-ssl"><h1>Setting up SSL with nginx on Ubuntu server</h1></a>
-	<p><img alt="" src="/images/ssl2.png"></p>
-<p>For a long time I've procrastinated to learn how to properly configure HTTPS. Turns out it is super easy. This is my simple step by step guide.</p>
-
-
-	<a class="read-more" href="/post/setting-up-ssl">Read more...</a>
+	<a class="read-more" href="/post/recursion">Read more...</a>
 	<br/>
 
 <!-- Footer -->
 <div class="post-footer">
   <div class="tags">
     <span class="label label-default">
-      <a href="/webdev">webdev</a>
+      <a href="/tech">tech</a>
     </span>
 	      
-    <span class="label label-default">
-      <a href="/tag/Webdev">Webdev</a>
-    </span>
-    <span class="label label-default">
-      <a href="/tag/Devops">Devops</a>
-    </span>
-    <span class="label label-default">
-      <a href="/tag/Mastodon">Mastodon</a>
-    </span>
   </div> <!-- tags -->
 
   <div class="right">
@@ -200,56 +136,6 @@ gpasswd -a ray sudo
   <!-- Actions -->
     <div class="actions">
       <!-- Comments -->
-	            
-	      
-    </div> <!-- End .actions -->
-  <div class="clearfix"></div>
-</div>      
-      </article>
-
-      <article class="post">
-	<a href="/post/fullstack-web-development-roadmap"><h1>Full-Stack Web Development - the Complete Roadmap</h1></a>
-	<p><img alt="" src="/images/webdev-roadmap-1.jpeg"></p>
-<p>Learning web development is a huge advantage for a founder, even understanding
-the basics will be extremely useful. This post will give you a high-level
-overview of everything you need to learn, a roadmap for getting started, and a
-collection of the best resources you can use to learn quickly.</p>
-
-
-	<a class="read-more" href="/post/fullstack-web-development-roadmap">Read more...</a>
-	<br/>
-
-<!-- Footer -->
-<div class="post-footer">
-  <div class="tags">
-    <span class="label label-default">
-      <a href="/webdev">webdev</a>
-    </span>
-	      
-    <span class="label label-default">
-      <a href="/tag/backend">backend</a>
-    </span>
-    <span class="label label-default">
-      <a href="/tag/frontend">frontend</a>
-    </span>
-    <span class="label label-default">
-      <a href="/tag/devops">devops</a>
-    </span>
-  </div> <!-- tags -->
-
-  <div class="right">
-    <a href="/rayalez"><b>@rayalez</b></a>
-  </div>
-  <!-- Actions -->
-    <div class="actions">
-      <!-- Comments -->
-      <a class="btn btn-default"
-	 href=""
-	 data-toggle="tooltip" data-placement="top"
-	 title="Discuss on Reddit">      
-	<i class="fa fa-reddit-square"></i>
-	Discuss
-      </a>
 	            
 	      
     </div> <!-- End .actions -->

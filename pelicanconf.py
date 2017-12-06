@@ -72,3 +72,5 @@ SUMMARY_MAX_LENGTH = 140
 DEFAULT_PAGINATION = 8
 
 
+# Don't show drafts folder in list of categories
+IGNORE_FILES = ['drafts']
