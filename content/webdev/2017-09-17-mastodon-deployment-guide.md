@@ -204,7 +204,7 @@ Congratulations =) Create an account, test things, and invite some people to use
 
 I also recommend submitting a link to your instance to [this list](https://instances.mastodon.xyz) to make it easier for people to discover it.
 
-If you're looking for some help with deployment - send an email to **contact@startuplab.io**, and I will setup mastodon for you($100).
+<!-- If you're looking for some help with deployment - send an email to **contact@startuplab.io**, and I will setup mastodon for you($100). -->
 
-Also, always feel free to toot at me at [@startuplab@mastodon.social](https://mastodon.social/@startuplab), I will be happy to answer your questions =)
+Also, always feel free to toot at me at [@rayalez@mastodon.social](https://mastodon.social/@rayalez), I will be happy to answer your questions =)
 
