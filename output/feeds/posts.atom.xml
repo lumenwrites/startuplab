@@ -50,7 +50,7 @@ gpasswd -a ray sudo
 
 &lt;h2&gt;Install and configure basic stuff&lt;/h2&gt;
 &lt;p&gt;Update and upgrade all the software:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get update &amp;amp;amp;&amp;amp;amp; sudo apt-get upgrade
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -156,7 +156,7 @@ docker-compose up -d
 
 
 &lt;p&gt;After this has finished, restart the containers:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker stop $(docker ps -a -q) &amp;amp;amp;&amp;amp;amp; docker-compose up -d
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker stop $(docker ps -a -q) &amp;amp;&amp;amp; docker-compose up -d
 &lt;/pre&gt;&lt;/div&gt;
 
 

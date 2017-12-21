@@ -48,7 +48,7 @@ ssh ray@hackertribe.io
 Update and upgrade all the software:
 
 ```
-sudo apt-get update &amp;&amp; sudo apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade
 ```
 
 Install nginx(we'll use it to serve our droplet on the right port), and your favorite text editor:
@@ -178,7 +178,7 @@ docker-compose run --rm web rails assets:precompile
 After this has finished, restart the containers:
 
 ```
-docker stop $(docker ps -a -q) &amp;&amp; docker-compose up -d
+docker stop $(docker ps -a -q) && docker-compose up -d
 ```
 
 And now your mastodon instance will run on yourdomain.com:3000!!
