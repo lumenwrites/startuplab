@@ -1,5 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Startup Lab - tech</title><link href="/" rel="alternate"></link><link href="/feeds/tech.atom.xml" rel="self"></link><id>/</id><updated>2017-09-17T00:00:00-07:00</updated><entry><title>What is Recursion?</title><link href="/post/recursion" rel="alternate"></link><published>2017-09-17T00:00:00-07:00</published><updated>2017-09-17T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-09-17:/post/recursion</id><summary type="html">&lt;p&gt;&lt;img alt="" src="https://cdn-images-1.medium.com/max/1520/1*NXs4iBMjyXG-4Zekq-wKHQ.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Startup Lab - tech</title><link href="/" rel="alternate"></link><link href="/feeds/tech.atom.xml" rel="self"></link><id>/</id><updated>2018-02-07T00:00:00-08:00</updated><entry><title>Deep Learning Resources</title><link href="/post/deep-learning-resources" rel="alternate"></link><published>2018-02-07T00:00:00-08:00</published><updated>2018-02-07T00:00:00-08:00</updated><author><name>Ray Alez</name></author><id>tag:None,2018-02-07:/post/deep-learning-resources</id><summary type="html">&lt;style&gt;
+h3 a {
+text-decoration: underline;
+}
+p a, ul a {
+color: #008cba;
+}
+&lt;/style&gt;
+
+&lt;p&gt;&lt;img alt="" src="/images/deep-learning-resources.jpg"&gt;&lt;/p&gt;
+&lt;h1&gt;Deep Learning Resources&lt;/h1&gt;
+&lt;h2&gt;Best way to learn DL from scratch in 2018&lt;/h2&gt;
+&lt;p&gt;There are more and more amazing resources that make Deep Learning more
+accessible than ever. A few years ago, it would be extremely hard to find a good
+introduction that doesn’t overwhelm you with a gigantic list of prerequisites.
+Now, you don’t need eleven PhD’s to get started. If you know python — you can
+start training your first ANNs in a matter of days, and get quite comfortable in
+this field in a few months.&lt;/p&gt;
+&lt;p&gt;This is a collection of the best resources that will help you get started, that
+assumes no prerequisites other than basic understanding of Python.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.udemy.com/python-for-data-science-and-machine-learning-bootcamp"&gt;Python for Data Science and Machine Learning&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you are unsure about your python skills, I …&lt;/p&gt;</summary><content type="html">&lt;style&gt;
+h3 a {
+text-decoration: underline;
+}
+p a, ul a {
+color: #008cba;
+}
+&lt;/style&gt;
+
+&lt;p&gt;&lt;img alt="" src="/images/deep-learning-resources.jpg"&gt;&lt;/p&gt;
+&lt;h1&gt;Deep Learning Resources&lt;/h1&gt;
+&lt;h2&gt;Best way to learn DL from scratch in 2018&lt;/h2&gt;
+&lt;p&gt;There are more and more amazing resources that make Deep Learning more
+accessible than ever. A few years ago, it would be extremely hard to find a good
+introduction that doesn’t overwhelm you with a gigantic list of prerequisites.
+Now, you don’t need eleven PhD’s to get started. If you know python — you can
+start training your first ANNs in a matter of days, and get quite comfortable in
+this field in a few months.&lt;/p&gt;
+&lt;p&gt;This is a collection of the best resources that will help you get started, that
+assumes no prerequisites other than basic understanding of Python.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.udemy.com/python-for-data-science-and-machine-learning-bootcamp"&gt;Python for Data Science and Machine Learning&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you are unsure about your python skills, I recommend getting started here.
+This simple introductory course will take you through all the libraries you will
+need to comfortably follow any of the courses below. Use it to refresh your
+memory, and learn the fundamentals of Python, Jupyter, NumPy, and Matplotlib.
+There are more sections in this course, but as long as you know these 4 — you’re
+good.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"&gt;3blue1brown videos on neural networks&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The best way to understand the basics of DL is to watch this extremely brilliant
+high-level concise overview of how ANNs work. I highly recommend you get started
+here. Watch these 4 short videos, and you have a good general idea of everything
+you’ll need to learn in more detail using the other resources.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.manning.com/books/grokking-deep-learning"&gt;Grokking Deep Learning&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This is a fantastic book that will teach you the fundamental principles of Deep
+Learning. It has very intuitive and easy to follow explanations, and doesn’t use
+any libraries other than NumPy. You will gradually build up your understanding,
+and build all the basic algorithms you want to know, from scratch.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://machinelearningmastery.com/deep-learning-with-python/"&gt;Deep Learning With Python&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Unlike the previous book, this one doesn’t go into math and theory, instead
+guides you through building several practical projects with a very simple to use
+DL library(keras). It’s a great way to gain practical experience in addition to
+the theory from the previous book. Also has no prerequisites other than python,
+and makes it very easy to get started.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="http://course.fast.ai/"&gt;Fast.ai Deep Learning course (v.2)&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you’re looking for the fastest, easiest way to go from zero to training
+cutting edge deep learning algorithms, the best place to learn is
+&lt;a href="http://course.fast.ai/"&gt;fast.ai&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is a free course that teaches you deep learning using a top-down approach.
+You will begin by training a state of the art image classifier using only a few
+lines of code in the first couple of hours, and as you follow along, the course
+will go more in depth explaining the theory, other algorithms, and giving you a
+complete understanding of how things work.&lt;/p&gt;
+&lt;p&gt;The amount of information might be a little overwhelming at first, that’s why I
+recommend you to also use the books mentioned above if you get confused at any
+point.&lt;/p&gt;
+&lt;p&gt;These 5 resources will be enough to take you from zero to competently training
+ANNs in a few months. The rest of the article is a collection of other excellent
+resources that will make your journey easier.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Math Prerequisites&lt;/h3&gt;
+&lt;p&gt;The easiest way to learn the math you’ll need for DL is by following Khan
+Academy and 3blue1brown’s courses. You won’t need to learn all of this before
+other courses, but I recommend watching these videos in your free time,
+eventually you will find this knowledge useful. Most importantly, you will need
+to know these 3 subjects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Calculus&lt;/strong&gt;  - &lt;a href="https://www.khanacademy.org/math/calculus-home"&gt;Khan Academy&lt;/a&gt;, &lt;a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"&gt;3blue1brown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linear Algebra&lt;/strong&gt; - &lt;a href="https://www.khanacademy.org/math/linear-algebra"&gt;Khan Academy&lt;/a&gt;, &lt;a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"&gt;3blue1brown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Probability and Statistics&lt;/strong&gt; - &lt;a href="https://www.khanacademy.org/math/statistics-probability"&gt;Khan Academy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href="http://shop.oreilly.com/product/0636920052289.do"&gt;Hands-On Machine Learning&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This book is the best way to learn the machine learning in general, it gives you
+an excellent reference and overview of all the algorithms.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.coursera.org/learn/machine-learning"&gt;Andrew Ng’s Coursera course&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This course if one of the most popular ways to get started with ML.&lt;/p&gt;
+&lt;h3&gt;MIT courses&lt;/h3&gt;
+&lt;p&gt;Once you’re ready for something more advanced, I highly recommend checking out
+these new brilliant courses from MIT:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://introtodeeplearning.com/"&gt;Introduction to Deep Learning&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="https://agi.mit.edu/"&gt;Artificial General Intelligence&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="https://selfdrivingcars.mit.edu/"&gt;Deep Learning for Self-Driving Cars&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Artificial Intelligence&lt;/h2&gt;
+&lt;p&gt;Finally, these are resources for people interested in learning about AGI and
+gaining a broader understanding of AI as a field.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.audible.com/pd/Science-Technology/The-Master-Algorithm-Audiobook/B014X1DS8W"&gt;The Master Algorithm&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This is a great audiobook giving you a high-level overview of ML field and
+algorithms, aiming to lay down the roadmap towards the “Master Algorithm”(AI
+that can learn anything).&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LKTE"&gt;On Intelligence&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this audiobook you will learn a theory of how human mind works that DL
+algorithms are based on. It’s very engaging, fascinating and fun to listen to,
+and will help you to think about ANN’s in a new way.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.amazon.com/Artificial-Intelligence-Modern-Approach-3rd/dp/0136042597"&gt;Artificial Intelligence: A Modern Approach&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The leading textbook in Artificial Intelligence. It’s not the fastest way to get
+started, but it’s considered one of the best AI textbooks ever written.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="https://www.youtube.com/playlist?list=PLIeooNSdhQE5kRrB71yu5yP9BRCJCSbMt"&gt;Stanford AI course&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Brilliant course based on Artificial Intelligence: A Modern Approach. Will
+really help you to understand this book better, and build a bunch of practical
+projects as you follow along.&lt;/p&gt;
+&lt;p&gt;And, a few great playlists on DL, just to complete the collection:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v"&gt;Machine Learning with
+Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU"&gt;Neural Networks
+Demystified&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA"&gt;Machine Learning youtube tutorials by
+&lt;/a&gt;&lt;a href="https://www.youtube.com/channel/UCcAtD_VYwcYwVbTdvArsm7w"&gt;mathematicalmonk&lt;/a&gt;&lt;/p&gt;</content><category term="AI"></category><category term="tech"></category></entry><entry><title>What is Recursion?</title><link href="/post/recursion" rel="alternate"></link><published>2017-09-17T00:00:00-07:00</published><updated>2017-09-17T00:00:00-07:00</updated><author><name>Ray Alez</name></author><id>tag:None,2017-09-17:/post/recursion</id><summary type="html">&lt;p&gt;&lt;img alt="" src="https://cdn-images-1.medium.com/max/1520/1*NXs4iBMjyXG-4Zekq-wKHQ.png"&gt;&lt;/p&gt;
 &lt;h2&gt;What is Recursion?&lt;/h2&gt;
 &lt;p&gt;Recursion simply means “self reference”. When something refers to itself or describes itself, it is called recursive.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;&lt;img alt="" src="https://cdn-images-1.medium.com/max/1520/1*NXs4iBMjyXG-4Zekq-wKHQ.png"&gt;&lt;/p&gt;
