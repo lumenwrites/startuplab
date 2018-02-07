@@ -12,9 +12,9 @@ color: #008cba;
 }
 </style>
 
-![](/images/deep-learning-resources.jpg)
+#### Best way to learn DL from scratch in 2018
 
-## Best way to learn DL from scratch in 2018
+![](/images/deep-learning-resources.jpg)
 
 There are more and more amazing resources that make Deep Learning more
 accessible than ever. A few years ago, it would be extremely hard to find a good
