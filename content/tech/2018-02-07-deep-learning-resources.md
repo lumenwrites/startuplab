@@ -14,8 +14,6 @@ color: #008cba;
 
 ![](/images/deep-learning-resources.jpg)
 
-# Deep Learning Resources
-
 ## Best way to learn DL from scratch in 2018
 
 There are more and more amazing resources that make Deep Learning more
